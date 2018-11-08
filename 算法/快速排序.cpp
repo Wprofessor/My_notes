@@ -52,16 +52,16 @@ void display(sqlist *t) {
 	cout<<endl;
 }
 int main() {
-	sqlist *t;
-	t = (sqlist *)malloc(sizeof(sqlist));   //记得开辟空间 
-	t->length = 5;
-	t->r[0].key = 67;
-	t->r[1].key =4;
-	t->r[2].key =54;
-	t->r[3].key =567;
-	t->r[4].key =65;
+	sqlist t;
+//	t = (sqlist *)malloc(sizeof(sqlist));   //若在主函数中用指针，记得开辟空间 
+	t.length = 5;
+	t.r[0].key = 67;
+	t.r[1].key =4;
+	t.r[2].key =54;
+	t.r[3].key =567;
+	t.r[4].key =65;
 
-	qsort(t,0,t->length-1);
-	display(t);
+	qsort(&t,0,t.length-1);
+	display(&t);
 	return 0;
 }
