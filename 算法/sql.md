@@ -115,6 +115,74 @@
 	for(it = x.begin(); it != x.end(); it++) {
 		cout<<*it<<endl;        //循环输出
     ```
-## STL集合set
-## STL映射类map
-## 
+## STL集合set(快速的查找和搜索)
+* ### 实例化对象(默认升序排序)
+    ```
+    set<int> seone;
+    multiset<int> musone;
+    ```
+* ### set插入元素
+    ```
+    setlntegers.insert(1);
+    msetlntegers.insert (setlntegers.begin(), setlntegers.end());
+    ```
+* ### set中查找元素
+    ```
+    和map类似
+    map查找的是key
+    set查找的是元素
+    ```
+* ### 删除set中的元素
+    ```
+    和map类似
+    ```
+## STL映射类map（类似于字典）
+### key（键）--value（值）
+
+* ### 实例化map对象
+    ```
+    map<int, string> maptwo;
+    map<int, string> mapthree(maptwo);
+    map<int, string> mapfour(mapthree.begin(), mapthree.end())
+    ```
+* ### map插入元素
+    1.使用makepair函数
+    ```
+    mapone.insert(make_pair(1, "one"));
+    ```
+    2.使用pair
+    ```
+    mapone.insert(pair<int, string>(2, "two"))
+    ```
+    3.使用数组语法
+    ```
+    mapone[3] = "three";
+    ```
+* ### 查找
+    ```
+    std::map<char,int> mymap;
+    std::map<char,int>::iterator it;
+
+    mymap['a']=50;
+    mymap['b']=100;
+    mymap['c']=150;
+    mymap['d']=200;
+
+    it = mymap.find('b');
+    f (it != mymap.end())
+    mymap.erase (it); // b被成功删除
+
+    ```
+* ### map删除元素
+1. 将键作为参数，这将删除包含指定键的所有键-值对:
+    ```
+    mapObject.erase(key);
+    ```
+2. 接受迭代器作为参数，并删除选代器指向的元素:
+    ```
+    mapObject.erase(iElement);
+    ```
+3. 使用选代器指定边界，从而将指定范围内的所有元素都从 map 或 multirnap 中删除:
+    ```
+    mapObject.erase(iLowerBound, iUpperBound);
+    ```
