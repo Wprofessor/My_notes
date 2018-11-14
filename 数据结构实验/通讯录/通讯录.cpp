@@ -51,6 +51,19 @@ node* add(node *head) {
 }
 node *insert(node *head,char name[],char phone[]) {
 	node *p,*q,*end;
+	FILE *rf;
+	int count;
+	rf = fopen("C:/Users/王教授/Desktop/contacts.txt","rb");
+	if(rf) {
+		fscanf(rf,"%d",&count);
+		fclose(rf);
+	}
+	FILE *rt;
+	rt = fopen("C:/Users/王教授/Desktop/contacts.txt","r+");
+	if(rt) {
+		fprintf(rt,"%d",count+1);
+		fclose(rt);
+	}
 	p = head;
 	if(!p) {
 		q = (node*)malloc(sizeof(node));
@@ -79,7 +92,7 @@ node *del(node *head,char name[]) {
 	p = head;
 	if(!find(head,name)) {
 		cout<<"删除的人不存在"<<endl;
-		return head; 
+		return head;
 	} else {
 		x = NULL;
 		while(p && strcmp(p->name,name) != 0) {
