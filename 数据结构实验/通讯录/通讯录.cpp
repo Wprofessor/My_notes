@@ -23,14 +23,14 @@ node* find(node *head,datatype x[]) {
 	}
 	return NULL;
 }
-//Â¼Èë
+//å½•å…¥
 node* add(node *head) {
 	node *p,*q;
 	p = head;
 	int n;
-	//ÎÄ¼ş¶ÁÈ¡
+	//æ–‡ä»¶è¯»å–
 	FILE *rf;
-	rf = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","rb");
+	rf = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","rb");
 	if(rf) {
 		fscanf(rf,"%d",&n);
 		for(int i = 0; i < n; i++) {
@@ -38,7 +38,7 @@ node* add(node *head) {
 			fscanf(rf,"%s%s",&q->name,&q->phone);
 			if(!p) {
 				p = q;
-				p->next = NULL;  //Í·½ÚµãÒÑ¾­¸Ä±ä
+				p->next = NULL;  //å¤´èŠ‚ç‚¹å·²ç»æ”¹å˜
 				head = p;
 			} else {
 				q->next = p->next;
@@ -54,13 +54,13 @@ node *insert(node *head,char name[],char phone[]) {
 	char ch[MAXSIZE];
 	FILE *rf;
 	int count;
-	rf = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","rb");
+	rf = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","rb");
 	if(rf) {
 		fscanf(rf,"%d",&count);
 		fclose(rf);
 	}
 	FILE *rt;
-	rt = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","r+");
+	rt = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","r+");
 	if(rt) {
 		fprintf(rt,"%d",count+1);
 		fclose(rt);
@@ -76,7 +76,7 @@ node *insert(node *head,char name[],char phone[]) {
 		strcpy(q->phone,phone);
 		strcat(ch,q->phone);
 		p = q;
-		p->next = NULL;  //Í·½ÚµãÒÑ¾­¸Ä±ä
+		p->next = NULL;  //å¤´èŠ‚ç‚¹å·²ç»æ”¹å˜
 		head = p;
 	} else {
 		end = p->next;
@@ -94,7 +94,7 @@ node *insert(node *head,char name[],char phone[]) {
 		p->next = q;
 	}
 	FILE *radd;
-	radd = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","a");
+	radd = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","a");
 	if(radd) {
 
 		fprintf(radd," %s",ch);
@@ -106,18 +106,18 @@ node *del(node *head,char name[]) {
 	node *p,*x;
 	p = head;
 	if(!find(head,name)) {
-		cout<<"É¾³ıµÄÈË²»´æÔÚ"<<endl;
+		cout<<"åˆ é™¤çš„äººä¸å­˜åœ¨"<<endl;
 		return head;
 	} else {
 		FILE *rf;
 		int count;
-		rf = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","rb");
+		rf = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","rb");
 		if(rf) {
 			fscanf(rf,"%d",&count);
 			fclose(rf);
 		}
 		FILE *radd;
-		radd = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","w");
+		radd = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","w");
 		if(radd) {
 			fprintf(radd,"%d",count-1);
 			fclose(radd);
@@ -138,7 +138,7 @@ node *del(node *head,char name[]) {
 		node *q = head;
 		while(q) {
 			FILE *radd;
-			radd = fopen("C:/Users/Íõ½ÌÊÚ/Desktop/contacts.txt","a");
+			radd = fopen("C:/Users/ç‹æ•™æˆ/Desktop/contacts.txt","a");
 			if(radd) {
 				fprintf(radd," %s %s",q->name,q->phone);
 				fclose(radd);
@@ -157,42 +157,43 @@ void display(node *head) {
 	}
 }
 void show() {
-	cout<<"------Í¨Ñ¶Â¼------"<<endl;
-	cout<<"1.Â¼ÈëĞÅÏ¢"<<endl;
-	cout<<"2.Ìí¼Ó³ÉÔ±"<<endl;
-	cout<<"3.É¾³ı³ÉÔ±"<<endl;
-	cout<<"4.²é¿´³ÉÔ±ĞÅÏ¢"<<endl;
-	cout<<"5.ÍË³ö³ÌĞò"<<endl;
+	cout<<"------é€šè®¯å½•------"<<endl;
+	cout<<"1.å½•å…¥ä¿¡æ¯"<<endl;
+	cout<<"2.æ·»åŠ æˆå‘˜"<<endl;
+	cout<<"3.åˆ é™¤æˆå‘˜"<<endl;
+	cout<<"4.æŸ¥çœ‹æˆå‘˜ä¿¡æ¯"<<endl;
+	cout<<"5.é€€å‡ºç¨‹åº"<<endl;
 }
 int main() {
 	while(1) {
+		system("cls");
 		node *head;
 		show();
 		int x;
-		cout<<"ÇëÑ¡Ôñ£º"<<endl;
+		cout<<"è¯·é€‰æ‹©ï¼š"<<endl;
 		cin>>x;
 		switch(x) {
-				//Â¼ÈëĞÅÏ¢
+				//å½•å…¥ä¿¡æ¯
 			case 1: {
 				system("cls");
 				head = init();
 				head = add(head);
-				cout<<"Â¼ÈëÍê³É"<<endl;
+				cout<<"å½•å…¥å®Œæˆ"<<endl;
 				system("pause");
 				break;
 			}
-			//Ìí¼ÓĞÅÏ¢
+			//æ·»åŠ ä¿¡æ¯
 			case 2: {
 				char name[MAXSIZE],phone[MAXSIZE];
 				system("cls");
 				head = init();
 				head = add(head);
-				cout<<"ÇëÊäÈëÄúÒªÌí¼ÓµÄĞÕÃû"<<endl;
+				cout<<"è¯·è¾“å…¥æ‚¨è¦æ·»åŠ çš„å§“å"<<endl;
 				cin>>name;
-				cout<<"ÇëÊäÈëÄúÒªÌí¼ÓµÄºÅÂğ"<<endl;
+				cout<<"è¯·è¾“å…¥æ‚¨è¦æ·»åŠ çš„å·å—"<<endl;
 				cin>>phone;
 				head = insert(head,name,phone);
-				cout<<"Ìí¼ÓÍê³É"<<endl;
+				cout<<"æ·»åŠ å®Œæˆ"<<endl;
 				system("pause");
 				break;
 			}
@@ -201,10 +202,10 @@ int main() {
 				system("cls");
 				head = init();
 				head = add(head);
-				cout<<"ÇëÊäÈëÄúÒªÉ¾³ıµÄĞÕÃû"<<endl;
+				cout<<"è¯·è¾“å…¥æ‚¨è¦åˆ é™¤çš„å§“å"<<endl;
 				cin>>name;
 				head = del(head,name);
-				cout<<"É¾³ıÍê³É"<<endl;
+				cout<<"åˆ é™¤å®Œæˆ"<<endl;
 				system("pause");
 				break;
 			}
