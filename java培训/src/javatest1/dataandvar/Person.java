@@ -37,4 +37,6 @@ public abstract class Person {
      * @return 返回对人的描述信息
      */
     public abstract String getDescription() ;
+
+    public abstract void save(JDBDao.SaveListener listener);
 }
