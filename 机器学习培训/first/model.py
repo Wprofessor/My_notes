@@ -15,20 +15,20 @@ class Linear:
     def draw(self, X, y):
         X = np.array(X)
         y = np.array(y)
-        plt.scatter(X, y, color="R")    #训练前的点图
-        y_temp = self.predict(X)         #带入函数后的函数值
-        plt.plot(X, y_temp)              #预测后的折线图
+        plt.scatter(X, y, color="R")  # 训练前的点图
+        y_temp = self.predict(X)  # 带入函数后的函数值
+        plt.plot(X, y_temp)  # 预测后的折线图
         plt.show()
 
-    def train(self, X, label, learning_rate=1e-3,
+    def train(self, X, label, learning_rate=1e-3,  # learning_rate为步长
               step=5000, batch_size=5):
         # 传入参数后都最好转换成nparray
         X = np.array(X)
-        label = np.array(label)    #样本
+        label = np.array(label)  # 样本
         for i in range(step):
             random_index = np.random.randint(low=0,
                                              high=len(X),
-                                             size=batch_size)       #size是维度，在这里是生成的个数
+                                             size=batch_size)  # size是维度，在这里是生成的个数
 
             # 获取训练的数据
             X_train = X[random_index]  # 点的横轴
@@ -37,6 +37,8 @@ class Linear:
             y_pre = self.predict(X_train)  # y_pre : (1,5)
             # loss = (y-y_pre)^2 ，方差
             loss = (y_train - y_pre) ** 2  # loss :(1,5)
+            # 此时未知数为a和b，问题转换为求二元函数的最小值
+            # 方法：梯度下降法
             print("loss:", np.sum(loss))
             # 方差对预测值求导
             dlossy_pre = -2 * (y_train - y_pre)  # loss :(1,5)
@@ -44,8 +46,10 @@ class Linear:
 
             dloss_alpha = dlossy_pre * df_alpha * learning_rate  # loss :(1,5)
 
-            self.alpha -= np.mean(dloss_alpha)        #求平均值
+            self.alpha -= np.mean(dloss_alpha)  # 求平均值，梯度下降
             self.bias -= np.mean(dlossy_pre) * learning_rate
+            print("a:", self.alpha)
+            print("b", self.bias)
 
 
 class Multinomial:
@@ -69,6 +73,7 @@ class Multinomial:
         plt.scatter(X, y, color="R")
         y_temp = self.predict(X)
         plt.plot(X, y_temp)
+        print("emmm")
         plt.show()
 
     def train(self, X, label, learning_rate=1e-3,
