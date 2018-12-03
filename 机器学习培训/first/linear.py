@@ -1,5 +1,3 @@
-from builtins import len, int, range
-
 import numpy as np
 from model import Linear
 from model import multinomialModel
@@ -7,7 +5,6 @@ from model import LWRL
 from model import StereMultinomial
 # 数据可视化
 import matplotlib.pyplot as plt
-
 def load_data():
     path = "./data/temperature.txt"
     file = open(path)

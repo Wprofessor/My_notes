@@ -1,5 +1,3 @@
-from builtins import range, len
-
 import numpy as np
 import matplotlib.pyplot as plt
 
