@@ -19,10 +19,10 @@ void creat(Mgraph *g) {
 	rt = fopen("C:/Users/王教授/Desktop/图的应用.txt","rb");
 	if(rt) {
 		fscanf(rt,"%d%d",&g->n,&g->e);
-		for(int i = 0;i < g->n;i++) {
+		for(int i = 1;i <= g->n;i++) {
 			fscanf(rt,"%s",&g->vexs[i]);
 		}
-		for(int i = 0;i < g->e;i++) {
+		for(int i = 1;i <= g->e;i++) {
 			for(int j = 0;j < g->e;j++) {
 				g->edges[i][j] = FINITY;
 				if(i == j)
@@ -30,7 +30,7 @@ void creat(Mgraph *g) {
 			}
 		}
 		int x,y;
-		for(int i = 0;i < g->e;i++) {
+		for(int i = 1;i <= g->e;i++) {
 			fscanf(rt,"%d%d",&x,&y);
 			fscanf(rt,"%d",&g->edges[x][y]);
 			g->edges[y][x] = g->edges[x][y];
@@ -79,8 +79,8 @@ void dijkstra(Mgraph *g,int V0,path p,dist d) {
 }
 void print(Mgraph *g,path p,dist d,int i) {
 	int stk[M],pre,top=-1;  //用顺序栈来进行输出
-//	for(int i=1;i<=g->n;i++){
-//		cout<<"juli"<<i<<"---"<<d[i]<<endl;
+//	for(int j=1;j<=g->n;j++)
+//		cout<<"juli"<<j<<"---"<<d[j]<<endl;
 	stk[++top]=i;
 	//	cout<<top<<endl;
 	pre=p[i];
@@ -92,7 +92,7 @@ void print(Mgraph *g,path p,dist d,int i) {
 		printf(" %s",g->vexs[stk[top--]]);
 	}
 	cout<<endl;
-//	}
+
 }
 int main() {
 
@@ -100,8 +100,7 @@ int main() {
 	dist d;
 	path p;
 	creat(&g);
-	dijkstra(&g,0,p,d);
+	dijkstra(&g,1,p,d);
 	print(&g,p,d,2);
-	cout<<"emmm"<<endl;
 	return 0;
 }
