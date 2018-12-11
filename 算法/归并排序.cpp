@@ -78,7 +78,7 @@ int main() {
 	tab.r[3].key = 4;
 	tab.r[4].key = 3;
 	mergesort(&tab);
-	for(int i = 0;i <= tab.length;i++) {
+	for(int i = 1;i <= tab.length;i++) {
 		cout<<tab.r[i].key<<endl;
 	}
 	return 0;
