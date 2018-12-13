@@ -6,14 +6,14 @@
 using namespace std;
 bool vis[MAXSIZE];
 int prime[MAXSIZE],n;
-//ËØÊý´ò±í
+//Ã‹Ã˜ÃŠÃ½Â´Ã²Â±Ã­
 void getprime() {
 	memset(vis,true,sizeof(vis));
 	int num = 1;
-	for(int i = 2; i <= n; i++) {
+	for(int i = 2; i <= MAXSIZE; i++) {
 		if(vis[i])
 			prime[num++] = i;
-		for(int j = 1; j <= num && i*prime[j] < n; j++) {
+		for(int j = 1; j <= num && i*prime[j] < MAXSIZE; j++) {
 			vis[i*prime[j]] = false;
 			if(i % prime[j] == 0)
 				break;
@@ -23,7 +23,7 @@ void getprime() {
 int main() {
 	cin>>n;
 	getprime();
-	if(vis[n-1])
+	if(vis[n])
 	cout<<1<<endl;
 	return 0;
 }
