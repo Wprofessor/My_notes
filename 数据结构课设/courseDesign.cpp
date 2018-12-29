@@ -1,12 +1,14 @@
 #include <winsock.h>
 #include <iostream>
-#include <string>
+#include <string.h>
+#include<stdlib.h>
 #include <mysql.h>
-#define MAXSIZE 100
+#define MAXSIZE 50
 using namespace std;
 typedef struct b {			//图书信息表
 	char ISBN[20];			//书号
 	char book_name[50];		//书名
+	char type[30];			//类别
 	char writer[15];		//作者
 	char intro[200];		//简介
 	int standing_stock;		//现存量
@@ -34,7 +36,8 @@ typedef struct s {			//学生信息表
 	int Arrearge;			//欠费金额
 	int boorow_sum;			//累积借书总量
 	char remark[200];		//备注
-	borrowing_table *borrow[MAXSIZE];
+	borrowing_table borrow[MAXSIZE];
+	int length;
 	struct s *next;
 }student;
 typedef struct t {			//老师信息表
@@ -45,7 +48,10 @@ typedef struct t {			//老师信息表
 	char teacher_phone[20];	//老师电话
 	char remark[200];		//备注
 }teacher;
-
+typedef struct {
+	teacher te[MAXSIZE];
+	int length;
+}teacher_sequence;
 void MySql() {
 	//必备的一个数据结构
 	MYSQL mysql;
@@ -91,9 +97,10 @@ void MySql() {
 	}
 	system("pause");
 	//图书信息表(book)
-	//ISBN:书号,book_name:书名,writer:作者,intro:简介,remark:备注,standing_stock:现存量,repertory:库存
+	//ISBN:书号,book_name:书名,class:类别,writer:作者,intro:简介,remark:备注,standing_stock:现存量,repertory:库存
 	sqlstr = "create table if not exists book(ISBN VARCHAR(20),";
 	sqlstr += "book_name VARCHAR(50)CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NULL,";
+	sqlstr += "class VARCHAR(30)CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NULL,";
 	sqlstr += "writer VARCHAR(30)CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NULL,";
 	sqlstr += "intro VARCHAR(1000)CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NULL,";
 	sqlstr += "standing_stock INT,";
@@ -170,31 +177,31 @@ void MySql() {
 
 	//向表中插入数据
 	sqlstr =
-		"INSERT INTO book VALUES('9787544285147','恶意','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
-	sqlstr += "('9787544285148','恶意','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
-	sqlstr += "('9787544285149','恶意','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
-	sqlstr += "('9787544285150','恶意','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
-	sqlstr += "('9787544285151','恶意','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
-	sqlstr += "('9787544285152','恶意','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
-	sqlstr += "('9787020024759','围城','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
-	sqlstr += "('9787020024760','围城','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
-	sqlstr += "('9787020024761','围城','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
-	sqlstr += "('9787020024762','围城','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
-	sqlstr += "('9787020024763','围城','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
-	sqlstr += "('9787020049295','平凡的世界','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象',0,3,'一本严重损坏，需丢弃'),";
-	sqlstr += "('9787020049296','平凡的世界','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象',0,3,'一本严重损坏，需丢弃'),";
-	sqlstr += "('9787020049297','平凡的世界','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象',0,3,'一本严重损坏，需丢弃'),";
-	sqlstr += "('9787020026906','白鹿原','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。',2,3,'无'),";
-	sqlstr += "('9787020026907','白鹿原','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。',2,3,'无'),";
-	sqlstr += "('9787020026908','白鹿原','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。',2,3,'无'),";
-	sqlstr += "('9787549529322','看见','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
-	sqlstr += "('9787549529323','看见','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
-	sqlstr += "('9787549529324','看见','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
-	sqlstr += "('9787549529325','看见','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
-	sqlstr += "('9787549529326','看见','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
-	sqlstr += "('9787508645056','你的孤独，虽败犹荣','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。',3,3,'无'),";
-	sqlstr += "('9787508645057','你的孤独，虽败犹荣','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。',3,3,'无'),";
-	sqlstr += "('9787508645058','你的孤独，虽败犹荣','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。',3,3,'无')";
+		"INSERT INTO book VALUES('9787544285147','恶意','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
+	sqlstr += "('9787544285148','恶意','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
+	sqlstr += "('9787544285149','恶意','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
+	sqlstr += "('9787544285150','恶意','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
+	sqlstr += "('9787544285151','恶意','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
+	sqlstr += "('9787544285152','恶意','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。',2,6,'借阅量大，需加购'),";
+	sqlstr += "('9787020024759','围城','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
+	sqlstr += "('9787020024760','围城','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
+	sqlstr += "('9787020024761','围城','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
+	sqlstr += "('9787020024762','围城','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
+	sqlstr += "('9787020024763','围城','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。',4,5,'无'),";
+	sqlstr += "('9787020049295','平凡的世界','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象',0,3,'一本严重损坏，需丢弃'),";
+	sqlstr += "('9787020049296','平凡的世界','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象',0,3,'一本严重损坏，需丢弃'),";
+	sqlstr += "('9787020049297','平凡的世界','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象',0,3,'一本严重损坏，需丢弃'),";
+	sqlstr += "('9787020026906','白鹿原','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。',2,3,'无'),";
+	sqlstr += "('9787020026907','白鹿原','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。',2,3,'无'),";
+	sqlstr += "('9787020026908','白鹿原','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。',2,3,'无'),";
+	sqlstr += "('9787549529322','看见','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
+	sqlstr += "('9787549529323','看见','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
+	sqlstr += "('9787549529324','看见','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
+	sqlstr += "('9787549529325','看见','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
+	sqlstr += "('9787549529326','看见','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录',3,5,'无'),";
+	sqlstr += "('9787508645056','你的孤独，虽败犹荣','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。',3,3,'无'),";
+	sqlstr += "('9787508645057','你的孤独，虽败犹荣','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。',3,3,'无'),";
+	sqlstr += "('9787508645058','你的孤独，虽败犹荣','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。',3,3,'无')";
 	if (0 == mysql_query(&mysql, sqlstr.c_str())) {
 		cout << "mysql_query() insert 1data succeed" << endl;
 	}
@@ -259,25 +266,58 @@ void MySql() {
 	mysql_close(&mysql);
 	system("pause");
 }
-student * StudentLink(student *st) {
+//学生信息链表初始化
+student * StudentLink() {
 	return NULL;
 }
-book * BookLink(book *bo) {
+//图书信息链表初始化
+book * BookLink() {
 	return NULL;
 }
-void initData(student *st, book *bo) {
+void initData(book **bo, student **st, teacher_sequence *t) {
+	//必备的一个数据结构
 	MYSQL mysql;
 	string sqlstr;
 	//初始化数据库
-	mysql_library_init(0, NULL, NULL);
+	if (0 == mysql_library_init(0, NULL, NULL)) {
+		cout << "mysql_library_init() succeed" << endl;
+	}
+	else {
+		cout << "mysql_library_init() failed" << endl;
+		exit(-1);
+	}
+	system("pause");
 	//初始化数据结构
-	mysql_init(&mysql);
+	if (NULL != mysql_init(&mysql)) {
+		cout << "mysql_init() succeed" << endl;
+	}
+	else {
+		cout << "mysql_init() failed" << endl;
+		exit(1);
+	}
+	system("pause");
 	//在连接数据库之前，设置额外的连接选项
 	//可以设置的选项很多，这里设置字符集，否则无法处理中文
-	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	if (0 == mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk")) {
+		cout << "mysql_options() succeed" << endl;
+	}
+	else {
+		cout << "mysql_options() failed" << endl;
+		exit(-1);
+	}
+	system("pause");
 	//连接数据库
-	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
-	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	if (NULL
+		!= mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0))
+		//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	{
+		cout << "mysql_real_connect() succeed" << endl;
+	}
+	else {
+		cout << "mysql_real_connect() failed" << endl;
+		exit(-1);
+	}
+	system("pause");
 	MYSQL_RES *result;
 	MYSQL_FIELD *field;
 	MYSQL_ROW row;
@@ -297,6 +337,7 @@ void initData(student *st, book *bo) {
 	//cout << endl;
 	if (result)
 	{
+		book *p;
 		while (row = mysql_fetch_row(result))	//返回结果集中行的记录
 		{
 			/*for (int i = 0; i < numfields; i++)
@@ -304,55 +345,213 @@ void initData(student *st, book *bo) {
 				cout << row[i] << "---";
 			}
 			cout << endl;*/
-			book *p;
+
 			p = (book *)malloc(sizeof(book));
-			strcpy(p->ISBN, row[0]);
-			strcpy(p->book_name, row[1]);
-			strcpy(p->writer, row[2]);
-			strcpy(p->intro, row[3]);
-			p->standing_stock = atoi(row[4]);	//将字符串转换为int
-			p->repertory = atoi(row[5]);
-			strcpy(p->remark, row[6]);
-			if (!bo)
+			/*memset(p->ISBN, 0, sizeof(p->ISBN));
+			memset(p->book_name,0,sizeof(p->book_name));
+			memset(p->type,0,sizeof(p->type));
+			memset(p->writer,0,sizeof(p->writer));
+			memset(p->intro,0,sizeof(p->intro));
+			memset(p->remark,0,sizeof(p->remark));*/
+			strcpy_s(p->ISBN,strlen(row[0])+1, row[0]);
+			strcpy_s(p->book_name,strlen(row[1])+1, row[1]);
+			strcpy_s(p->type, strlen(row[2]) + 1, row[2]);
+			strcpy_s(p->writer, strlen(row[3]) + 1, row[3]);
+			strcpy_s(p->intro, strlen(row[4]) + 1, row[4]);
+			p->standing_stock = atoi(row[5]);	//将字符串转换为int
+			p->repertory = atoi(row[6]);
+			strcpy_s(p->remark, strlen(row[7]) + 1, row[7]);
+			if (!(*bo))
 			{
-				bo = p;
+				(*bo) = p;
+				(*bo)->next = NULL;
 			}
 			else
 			{
 				//将新节点插入到表头
-				p->next = bo;
-				bo = p;
+				p->next = (*bo);
+				(*bo) = p;
+			}
+		}
+	}
+	mysql_free_result(result);	//释放result空间
+	//初始化借阅表
+	borrowing_table b[MAXSIZE][MAXSIZE];
+	sqlstr = "SELECT * FROM borrowing_table";
+	mysql_query(&mysql, sqlstr.c_str());
+	result = mysql_store_result(&mysql);		//将查询的全部结果读取到客户端
+	numfields = mysql_num_fields(result);
+	numRows = mysql_num_rows(result);
+	if (result)
+	{
+		int i, j;
+
+		//先初始化为空
+		for (i = 0; i < MAXSIZE; i++)
+		{
+			for (j = 0; j < MAXSIZE; j++)
+			{
+				strcpy_s(b[i][j].student_ID, "");
+			}
+		}
+		while (row = mysql_fetch_row(result))
+		{
+
+			for (i = 1, j = 1; i < MAXSIZE; i++)
+			{
+				if (strcmp(row[1], b[i][j].student_ID) == 0) {
+					while (strcmp(row[1], b[i][j].student_ID) == 0)
+					{
+						j++;
+					}
+					strcpy_s(b[i][j].ISBN, strlen(row[0]) + 1, row[0]);
+					strcpy_s(b[i][j].student_ID, strlen(row[1]) + 1, row[1]);
+					strcpy_s(b[i][j].boorow_time, strlen(row[2]) + 1, row[2]);
+					strcpy_s(b[i][j].return_time, strlen(row[3]) + 1, row[3]);
+					strcpy_s(b[i][j].isrenew, strlen(row[4]) + 1, row[4]);
+					strcpy_s(b[i][j].remark, strlen(row[5]) + 1, row[5]);
+					break;
+				}
+				else if (strcmp(b[i][j].student_ID, "") == 0)
+				{
+					strcpy_s(b[i][j].ISBN, strlen(row[0]) + 1, row[0]);
+					strcpy_s(b[i][j].student_ID, strlen(row[1]) + 1, row[1]);
+					strcpy_s(b[i][j].boorow_time, strlen(row[2]) + 1, row[2]);
+					strcpy_s(b[i][j].return_time, strlen(row[3]) + 1, row[3]);
+					strcpy_s(b[i][j].isrenew, strlen(row[4]) + 1, row[4]);
+					strcpy_s(b[i][j].remark, strlen(row[5]) + 1, row[5]);
+					break;
+				}
+
 			}
 		}
 	}
 	mysql_free_result(result);	//释放result空间
 	//初始化学生表
-	sqlstr = "SELECT * FROM book";
+	sqlstr = "SELECT * FROM student";
 	mysql_query(&mysql, sqlstr.c_str());
 	result = mysql_store_result(&mysql);		//将查询的全部结果读取到客户端
 	numfields = mysql_num_fields(result);
 	numRows = mysql_num_rows(result);
 	if (result) {
+		student *q;
+		int i;
 		while (row = mysql_fetch_row(result))
 		{
-			student *q;
+			int j = 1;
 			q = (student *)malloc(sizeof(student));
-			strcpy(q->student_ID,row[0]);
-			strcpy(q->student_name,row[1]);
-			strcpy(q->student_sex,row[2]);
-			strcpy(q->student_phone,row[3]);
-			strcpy(q->department,row[4]);
-			strcpy(q->take_effect,row[5]);
-			strcpy(q->lose_efficay,row[6]);
+			q->length = 0;
+			strcpy_s(q->student_ID, strlen(row[0]) + 1, row[0]);
+			for (i = 1; i < MAXSIZE; i++)
+			{
+				if (strcmp(b[i][j].student_ID, q->student_ID) == 0)
+				{
+					while (strcmp(b[i][j].student_ID, "") != 0)
+					{
+						q->borrow[q->length++] = b[i][j++];
+					}
+					break;
+				}
+			}
+			strcpy_s(q->student_name,strlen(row[1])+1, row[1]);
+			strcpy_s(q->student_sex, strlen(row[2]) + 1, row[2]);
+			strcpy_s(q->student_phone, strlen(row[3]) + 1, row[3]);
+			strcpy_s(q->department, strlen(row[4]) + 1, row[4]);
+			strcpy_s(q->take_effect, strlen(row[5]) + 1, row[5]);
+			strcpy_s(q->lose_efficay, strlen(row[6]) + 1, row[6]);
 			q->Arrearge = atoi(row[7]);		//将字符串转换为整型
 			q->boorow_sum = atoi(row[8]);
-			strcpy(q->remark,row[9]);
+			strcpy_s(q->remark, strlen(row[9]) + 1, row[9]);
+			if (!(*st))
+			{
+				(*st) = q;
+				(*st)->next = NULL;
+			}
+			else
+			{
+				q->next = (*st);
+				(*st) = q;
+			}
 		}
 	}
+	mysql_free_result(result);	//释放result空间
+	//初始化老师表
+	sqlstr = "SELECT * FROM teacher";
+	mysql_query(&mysql, sqlstr.c_str());
+	result = mysql_store_result(&mysql);		//将查询的全部结果读取到客户端
+	numfields = mysql_num_fields(result);
+	numRows = mysql_num_rows(result);
+
+	if (result)
+	{
+		t->length = 0;
+		int i = 1;
+		while (row = mysql_fetch_row(result))
+		{
+			strcpy_s(t->te[i].job_number, strlen(row[0]) + 1, row[0]);
+			strcpy_s(t->te[i].teacher_name, strlen(row[1]) + 1, row[1]);
+			strcpy_s(t->te[i].teacher_sex, strlen(row[2]) + 1, row[2]);
+			strcpy_s(t->te[i].teacher_phone, strlen(row[3]) + 1, row[3]);
+			strcpy_s(t->te[i++].remark, strlen(row[4]) + 1, row[4]);
+			t->length++;
+		}
+	}
+	mysql_free_result(result);	//释放result空间
 	mysql_close(&mysql);
-	system("pause");
+	//system("pause");
+}
+//输出图书信息表
+void displaybook(book *bo)
+{
+	book *p;
+	p = bo;
+	while (p) 
+	{
+		cout << p->ISBN << "---" << p->book_name << "---" << p->type << "---" << p->writer << endl;
+		cout << p->intro << endl;
+		p = p->next;
+	}
+}
+//输出学生信息
+void displaystudent(student  *st) {
+	student *p;
+	p = st;
+	while (p)
+	{
+		cout << p->student_ID << "---" << p->student_name << "---" << p->student_sex << "---" << p->student_phone << "---" << p->department << endl;
+		p = p->next;
+	}
+}
+//根据学号查看借阅信息
+void SeeBorrow(student *st,char id[]) {
+	student * p;
+	int i;
+	p = st;
+	while (p)
+	{
+		if (strcmp(p->student_ID,id) == 0)
+		{
+			
+			for ( i = 0; i < p->length; i++)
+			{
+				cout << p->borrow[i].ISBN << "---" << p->borrow->boorow_time << "---" << p->borrow->return_time << endl;
+			}
+		}
+		p = p->next;
+	}
 }
 int main() {
-	MySql();
+	book *bo;
+	teacher_sequence t;
+	student *st;
+	st = StudentLink();
+	bo = BookLink();
+	 initData(&bo, &st, &t);
+	cout << "图书信息表" << endl;
+	//displaybook(bo);
+	//displaystudent(st);
+	char id[] = "1509024219";
+	SeeBorrow(st, id);
+	system("pause");
 	return 0;
 }
