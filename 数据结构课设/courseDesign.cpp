@@ -4,9 +4,10 @@
 #include<stdlib.h>
 #include <mysql.h>
 #include<time.h>
+#include<conio.h>
 #define _CRT_SECURE_NO_WARNINGS 1
 #pragma warning( disable : 4996 )	//防止time函数报错
-#define MAXSIZE 50
+#define MAXSIZE 25
 using namespace std;
 typedef struct b {			//图书信息表
 	int number;				//序号
@@ -67,6 +68,139 @@ typedef struct {
 	teacher te[MAXSIZE + 1];
 	int length;
 }teacher_sequence;
+//字典树
+typedef struct tire_node {
+	int count;		//记录该节点代表的单词个数
+	char word[MAXSIZE];
+	bool isStr;		//标记该节点是否构成完整单词
+	struct tire_node *children[MAXSIZE];	//各个子节点
+} tire;
+tire *initTire() {	//初始化
+	tire *root;
+	root = (tire *)malloc(sizeof(tire));
+	root->count = 0;
+	root->isStr = FALSE;
+	int i;
+	for (i = 0; i < MAXSIZE; i++)
+	{
+		root->children[i] = NULL;
+	}
+	return root;
+}
+void tireInsert(tire **root, char *word) {
+	tire *node = *root;
+	int i = 0;
+	int j;
+	int id;
+	while (word[i])
+	{
+		id = word[i] - 'a';
+		if (!node->children[id])
+		{
+			node->children[id] = new tire();	//开辟空间
+			for (j = 0; j < MAXSIZE; j++)
+			{
+				node->children[id]->children[j] = NULL;
+			}
+			node->children[id]->count = 0;
+			node->children[id]->isStr = FALSE;
+		}
+		node = node->children[id];
+		node->count++;
+		i++;
+	}
+	node->isStr = TRUE;
+	strcpy_s(node->word, strlen(word) + 1, word);
+}
+tire * tireSearch(tire *root, char *word) {
+	tire *node = root;
+	int i = 0;
+	while (word[i])
+	{
+		int id = word[i] - 'a';
+		if (node->children[id])
+		{
+			node = node->children[id];
+			i++;
+		}
+		else
+		{
+			return NULL;
+		}
+	}
+	return node;
+}
+//通过书的完整拼音输出其全部信息
+void printSpell(book *bo, char *sp, int *count) {
+	book *p = bo;
+	while (p)
+	{
+		if (strcmp(p->spell, sp) == 0)
+		{
+			p->number = (*count)++;
+			printf("|%-6d%-15s%-20s%-13s%-12s%-10s%-5d%5d  |\n", p->number, p->ISBN, p->book_name, p->writer, p->type, p->is_or_no, p->repertory, p->standing_stock);
+		}
+		p = p->next;
+	}
+}
+void student_menu(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID);
+//BFS遍历打印出满足前缀的图书信息
+void printTire(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID, char *front) {
+	int count = 1;
+	tire *node = tireSearch(root, front);
+	int i;
+	if (!node)
+	{
+		cout << "未匹配到您需要的信息，请重新输入" << endl;
+	}
+	else
+	{
+		cout << endl;
+		cout << "|---------------------------------------图书信息-----------------------------------------|" << endl;
+		cout << "|序号  编号           书名                作者         类别    是否借出   馆藏量   现存量|" << endl;
+		tire *queue[MAXSIZE];
+		int left = 0, right = 0;
+		queue[right++] = node;
+		while (left < right)
+		{
+			tire *p = queue[left++];
+			if (p->count != 0 && p->isStr)
+			{
+				printSpell(bo, p->word, &count);
+				//cout << p->word << p->isStr << endl;
+			}
+			for (i = 0; i < MAXSIZE; i++)
+			{
+				if (p->children[i])
+				{
+					queue[right++] = p->children[i];
+				}
+			}
+		}
+	}
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	student_menu(bo, t, st, bs, root, bp, student_ID);
+}
+//界面逻辑
+//主菜单
+void menu(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp);
+void menu_switch(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, int n);
+
+//会员登录
+void member(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp);
+
+//void student_menu_id(student *st, char *student_ID, char *student_name);
+void student_menu_switch(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, int n, char *student_ID);
+
+void print_student_information(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID);
+
+
+//管理员登录
+void teacher_register(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp);
+//void teacher_menu_id();
+void teacher_menu(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp);
+void teacher_menu_switch(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, int n);
 char *time()              /*时间函数*/
 {
 	char a[50], b[50], c[50];
@@ -141,103 +275,6 @@ void addteacher(teacher_sequence *head2) {             /*老师密码文件录入*/
 	}
 	fclose(rf);
 }
-void teacherlanding(teacher_sequence *head2, char account[], char password[])        /*老师登陆*/
-{
-	int n;
-	n = head2->length;
-	teacher_sequence *p;
-	p = head2;
-	int count = 0, num = 0, low = 1, high = n, mid;
-	while (low <= high)            /*二分查找*/
-	{
-		mid = (low + high) / 2;
-		if (mid == 0)
-		{
-			break;
-		}
-		if (strcmp(p->te[mid].job_number, account) == 0)
-		{
-			count = 1; break;
-		}
-		else if (strcmp(p->te[mid].job_number, account) > 0)
-			high = mid - 1;
-		else
-			low = mid + 1;
-	}
-	if (count == 0)
-	{
-		cout << "账号不存在！！" << endl;
-		cout << "请注册账号！！" << endl;
-		system("pause");
-		system("cls");
-	}
-	else
-	{
-		for (int i = 1; i <= n; i++)
-		{
-			if (strcmp(p->te[i].password, password) == 0)
-			{
-				num = 1;
-				break;
-			}
-		}
-		if (num == 0)
-		{
-			cout << "密码错误！！" << endl;
-			cout << "请重新输入密码！！" << endl;
-			system("pause");
-			system("cls");
-		}
-		else
-		{
-			cout << "登陆成功！！" << endl;
-		}
-	}
-}
-void studentlanding(student *head1, char account[], char password[])              /*学生登陆*/
-{
-	student *p, *q;
-	p = head1;
-	q = head1;
-	int count = 0, num = 0;
-	for (; p; p = p->next)
-	{
-		if (strcmp(p->student_ID, account) == 0)
-		{
-			count = 1;
-			break;
-		}
-	}
-	if (count == 0)
-	{
-		cout << "账号不存在！！" << endl;
-		cout << "请注册账号！！" << endl;
-		system("pause");
-		system("cls");
-	}
-	else
-	{
-		for (; q; q = q->next)
-		{
-			if (strcmp(q->password, password) == 0)
-			{
-				num = 1;
-				break;
-			}
-		}
-		if (num == 0)
-		{
-			cout << "密码错误！！" << endl;
-			cout << "请重新输入密码！！" << endl;
-			system("pause");
-			system("cls");
-		}
-		else
-		{
-			cout << "登陆成功！！" << endl;
-		}
-	}
-}
 teacher_sequence *charu(teacher_sequence *head2, char account[], char password[])
 {
 	teacher_sequence *p, *q, *end;
@@ -301,88 +338,7 @@ student *charu2(student *head1, char account2[], char password2[])
 	}
 	return head1;
 }
-void teacherregistered(teacher_sequence *head2)         /*老师注册*/
-{
-	teacher_sequence *p;
-	p = head2;
-	int n;
-	n = p->length;
-	char account[20];
-	cout << "注册账号：" << endl;
-	cin >> account;
-	int count = 0, num = 0, low = 1, high = n, mid;
-	while (low <= high)            /*二分查找*/
-	{
-		mid = (low + high) / 2;
-		if (mid == 0)
-		{
-			break;
-		}
-		if (strcmp(p->te[mid].job_number, account) == 0)
-		{
-			count = 1; break;
-		}
-		else if (strcmp(p->te[mid].job_number, account) > 0)
-			high = mid - 1;
-		else
-			low = mid + 1;
-	}
-	if (count == 0)
-	{
-		strcpy_s(head2->te[head2->length + 1].job_number, strlen(account) + 1, account);
-		cout << "注册密码：" << endl;
-		cin >> head2->te[head2->length + 1].password;
-		cout << "注册人姓名：" << endl;
-		cin >> head2->te[head2->length + 1].teacher_name;
-		cout << "注册人性别：" << endl;
-		cin >> head2->te[head2->length + 1].teacher_sex;
-		cout << "注册人电话：" << endl;
-		cin >> head2->te[head2->length + 1].teacher_phone;
-		cout << "注册人其他信息：" << endl;
-		cin >> head2->te[head2->length + 1].remark;
-		head2->length++;
-		MYSQL mysql;
-		string sqlstr;
-		mysql_library_init(0, NULL, NULL);
-		//初始化数据结构
-		mysql_init(&mysql);
-		//在连接数据库之前，设置额外的连接选项
-		//可以设置的选项很多，这里设置字符集，否则无法处理中文
-		mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
-		//连接数据库
-		mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
-		//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
-		cout << "数据库连接成功" << endl;
-		system("pause");
-		sqlstr = "INSERT INTO teacher VALUES('";
-		sqlstr += head2->te[head2->length + 1].job_number;
-		sqlstr += "','";
-		sqlstr += head2->te[head2->length + 1].teacher_name;
-		sqlstr += "','";
-		sqlstr += head2->te[head2->length + 1].teacher_sex;
-		sqlstr += "','";
-		sqlstr += head2->te[head2->length + 1].teacher_phone;
-		sqlstr += "','";
-		sqlstr += head2->te[head2->length + 1].remark;
-		sqlstr += "')";
-		cout << head2->te[head2->length + 1].job_number << head2->te[head2->length + 1].teacher_name << head2->te[head2->length + 1].teacher_sex << endl;
-		/*cout << sqlstr.c_str() << endl;
-		if (mysql_query(&mysql, sqlstr.c_str()) == 0)
-			cout << "注册成功！！" << endl;
-		else
-		{
-			cout << "失败" << endl;
-		}*/
-		charu(head2, head2->te[head2->length].job_number, head2->te[head2->length].password);
-		system("pause");
-		system("cls");
-	}
-	else
-	{
-		cout << "注册账号已经存在，请重新注册！！" << endl;
-	}
-}
-void studentregistered(student *head1)       /*学生注册*/
+void studentregistered(book *bo, teacher_sequence t, student *head1, borrow_sequence bs, tire *root, bookpopular bp)       /*学生注册*/
 {
 	student *p, *q;
 	p = head1;
@@ -479,14 +435,15 @@ void studentregistered(student *head1)       /*学生注册*/
 				sqlstr += "',0,0,'";
 				sqlstr += q->remark;
 				sqlstr += "')";
-				if(mysql_query(&mysql, sqlstr.c_str()) == 0)
-				cout << "注册成功！！" << endl;
+				if (mysql_query(&mysql, sqlstr.c_str()) == 0)
+					cout << "注册成功！！" << endl;
 				else
 				{
 					cout << "失败" << endl;
 				}
 				system("pause");
 				system("cls");
+				member(bo, t, head1, bs, root, bp);
 			}
 			else
 			{
@@ -500,10 +457,212 @@ void studentregistered(student *head1)       /*学生注册*/
 			cout << "注册账号已经存在，请重新注册！！" << endl;
 		}
 	}
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	{
+		menu(bo, t, head1, bs, root, bp);
+	}
 }
-//添加图书
-void add_book(book *head)
+void teacherlanding(book *bo, teacher_sequence head2, student *head1, borrow_sequence bs, tire *root, bookpopular bp, char account[], char password[])        /*老师登陆*/
 {
+	int n;
+	n = head2.length;
+	teacher_sequence *p;
+	p = &head2;
+	int count = 0, num = 0, low = 1, high = n, mid;
+	while (low <= high)            /*二分查找*/
+	{
+		mid = (low + high) / 2;
+		if (mid == 0)
+		{
+			break;
+		}
+		if (strcmp(p->te[mid].job_number, account) == 0)
+		{
+			count = 1; break;
+		}
+		else if (strcmp(p->te[mid].job_number, account) > 0)
+			high = mid - 1;
+		else
+			low = mid + 1;
+	}
+	if (count == 0)
+	{
+		cout << "账号不存在！！" << endl;
+		cout << "请注册账号！！" << endl;
+		system("pause");
+		system("cls");
+	}
+	else
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			if (strcmp(p->te[i].password, password) == 0)
+			{
+				num = 1;
+				break;
+			}
+		}
+		if (num == 0)
+		{
+			cout << "密码错误！！" << endl;
+			cout << "请重新输入密码！！" << endl;
+			system("pause");
+			system("cls");
+		}
+		else
+		{
+			cout << "登陆成功！！" << endl;
+		}
+	}
+}
+void studentlanding(book *bo, teacher_sequence t, student *head1, borrow_sequence bs, tire *root, bookpopular bp, char account[], char password[])              /*学生登陆*/
+{
+	student *p, *q;
+	p = head1;
+	q = head1;
+	int count = 0, num = 0;
+	for (; p; p = p->next)
+	{
+		if (strcmp(p->student_ID, account) == 0)
+		{
+			count = 1;
+			break;
+		}
+	}
+	if (count == 0)
+	{
+		cout << "账号不存在！！" << endl;
+		cout << "请注册账号！！" << endl;
+		system("pause");
+		system("cls");
+		studentregistered(bo, t, head1, bs, root, bp);
+	}
+	else
+	{
+		for (; q; q = q->next)
+		{
+			if (strcmp(q->password, password) == 0)
+			{
+				num = 1;
+				break;
+			}
+		}
+		if (num == 0)
+		{
+			cout << "密码错误！！" << endl;
+			cout << "请重新输入密码！！" << endl;
+			system("pause");
+			system("cls");
+			member(bo, t, head1, bs, root, bp);
+		}
+		else
+		{
+			cout << "登陆成功！！" << endl;
+			system("pause");
+			system("cls");
+			student_menu(bo, t, head1, bs, root, bp, account);
+		}
+	}
+}
+
+void teacherregistered(teacher_sequence *head2)         /*老师注册*/
+{
+	teacher_sequence *p;
+	p = head2;
+	int n;
+	n = p->length;
+	char account[20];
+	cout << "注册账号：" << endl;
+	cin >> account;
+	int count = 0, num = 0, low = 1, high = n, mid;
+	while (low <= high)            /*二分查找*/
+	{
+		mid = (low + high) / 2;
+		if (mid == 0)
+		{
+			break;
+		}
+		if (strcmp(p->te[mid].job_number, account) == 0)
+		{
+			count = 1; break;
+		}
+		else if (strcmp(p->te[mid].job_number, account) > 0)
+			high = mid - 1;
+		else
+			low = mid + 1;
+	}
+	if (count == 0)
+	{
+		strcpy_s(head2->te[head2->length + 1].job_number, strlen(account) + 1, account);
+		cout << "注册密码：" << endl;
+		cin >> head2->te[head2->length + 1].password;
+		cout << "注册人姓名：" << endl;
+		cin >> head2->te[head2->length + 1].teacher_name;
+		cout << "注册人性别：" << endl;
+		cin >> head2->te[head2->length + 1].teacher_sex;
+		cout << "注册人电话：" << endl;
+		cin >> head2->te[head2->length + 1].teacher_phone;
+		cout << "注册人其他信息：" << endl;
+		cin >> head2->te[head2->length + 1].remark;
+		head2->length++;
+		MYSQL mysql;
+		string sqlstr;
+		mysql_library_init(0, NULL, NULL);
+		//初始化数据结构
+		mysql_init(&mysql);
+		//在连接数据库之前，设置额外的连接选项
+		//可以设置的选项很多，这里设置字符集，否则无法处理中文
+		mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+		//连接数据库
+		mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+		//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+		cout << "数据库连接成功" << endl;
+		system("pause");
+		sqlstr = "INSERT INTO teacher VALUES('";
+		sqlstr += head2->te[head2->length].job_number;
+		sqlstr += "','";
+		sqlstr += head2->te[head2->length].teacher_name;
+		sqlstr += "','";
+		sqlstr += head2->te[head2->length].teacher_sex;
+		sqlstr += "','";
+		sqlstr += head2->te[head2->length].teacher_phone;
+		sqlstr += "','";
+		sqlstr += head2->te[head2->length].remark;
+		sqlstr += "')";
+		cout << sqlstr.c_str() << endl;
+		if (mysql_query(&mysql, sqlstr.c_str()) == 0)
+			cout << "注册成功！！" << endl;
+		else
+		{
+			cout << "失败" << endl;
+		}
+		charu(head2, head2->te[head2->length].job_number, head2->te[head2->length].password);
+		system("pause");
+		system("cls");
+	}
+	else
+	{
+		cout << "注册账号已经存在，请重新注册！！" << endl;
+	}
+}
+
+//添加图书
+void add_book(book *head, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)
+{
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
 	int count = 0;            /*标志是否查找到这本书在不在*/
 	cout << "请输入要添加的书名：" << endl;
 	char a[100];
@@ -511,7 +670,6 @@ void add_book(book *head)
 	book *p, *q, *pre = NULL, *k, *pri = NULL, *h;
 	p = head;
 	k = head;
-	h = head;
 	while (p)
 	{
 		pre = p;
@@ -536,12 +694,39 @@ void add_book(book *head)
 		q = (book *)malloc(sizeof(book));
 		cout << "请输入该书的ISBN码：" << "(参考这类书籍ISBN码,比如：" << pri->ISBN << ")" << endl;
 		cin >> q->ISBN;
+		int ok = 0;
+		book *wjh = head;
+		while (wjh) {
+			if (strcmp(wjh->ISBN, q->ISBN) == 0) {
+				ok = 1;
+				break;
+			}
+			wjh = wjh->next;
+		}
+		while (ok)
+		{
+			cout << "您输入的编码已存在，请重新输入：" << endl;
+			cin >> q->ISBN;
+			ok = 0;
+			book *wjh = head;
+			while (wjh) {
+				if (strcmp(wjh->ISBN, q->ISBN) == 0) {
+					ok = 1;
+					break;
+				}
+				wjh = wjh->next;
+			}
+		}
 		strcpy_s(q->book_name, strlen(pri->book_name) + 1, pri->book_name);
+		strcpy_s(q->spell, strlen(pri->spell) + 1, pri->spell);
+		strcpy_s(q->type, strlen(pri->type) + 1, pri->type);
 		strcpy_s(q->writer, strlen(pri->writer) + 1, pri->writer);
 		strcpy_s(q->intro, strlen(pri->intro) + 1, pri->intro);
 		strcpy_s(q->remark, strlen(pri->remark) + 1, pri->remark);
 		q->standing_stock = pri->standing_stock;
 		q->repertory = pri->repertory;
+		q->popular = pri->popular;
+		strcpy_s(q->is_or_no, strlen("否") + 1, "否");
 		q->next = pri->next;
 		pri->next = q;
 		while (k)
@@ -553,17 +738,51 @@ void add_book(book *head)
 			}
 			k = k->next;
 		}
+		sqlstr = "INSERT INTO book VALUES('";
+		sqlstr += q->ISBN;
+		sqlstr += "','";
+		sqlstr += q->book_name;
+		sqlstr += "','";
+		sqlstr += q->spell;
+		sqlstr += "','";
+		sqlstr += q->type;
+		sqlstr += "','";
+		sqlstr += q->writer;
+		sqlstr += "','";
+		sqlstr += q->intro;
+		sqlstr += "','";
+		sqlstr += q->is_or_no;
+		sqlstr += "',";
+		char ss[MAXSIZE];
+		sqlstr += itoa(q->standing_stock, ss, 10);
+		sqlstr += ",";
+		sqlstr += itoa(q->repertory, ss, 10);
+		sqlstr += ",'";
+		sqlstr += q->remark;
+		sqlstr += "',";
+		sqlstr += itoa(q->popular, ss, 10);
+		sqlstr += ")";
+		mysql_query(&mysql, sqlstr.c_str());
+		sqlstr = "update book set standing_stock = ";
+		sqlstr += itoa(q->standing_stock, ss, 10);
+		sqlstr += ",repertory = ";
+		sqlstr += itoa(q->repertory, ss, 10);
+		sqlstr += " where book_name = '";
+		sqlstr += q->book_name;
+		sqlstr += "'";
+		mysql_query(&mysql, sqlstr.c_str());
 		cout << "添加成功！" << endl;
 	}
 	else if (count == 0)
 	{
-		int nnum = 0;
-
-		char newisbn[15], newwriter[15], newintro[200], newremark[200];
+		int nnum;
+		char newisbn[15], newspell[20], newtype[20], newwriter[15], newintro[200], newremark[200];
 		cout << "图书馆无此类书籍，请输入相关信息" << endl;
 		do {
+			nnum = 0;
 			cout << "请输入书的ISBN码：" << endl;
 			cin >> newisbn;
+			h = head;
 			for (; h; h = h->next)
 			{
 				if (strcmp(h->ISBN, newisbn) == 0)
@@ -574,6 +793,10 @@ void add_book(book *head)
 			}
 			if (nnum == 0)
 			{
+				cout << "请输入书名拼音：" << endl;
+				cin >> newspell;
+				cout << "请输入书的类别：" << endl;
+				cin >> newtype;
 				cout << "请输入书的作者：" << endl;
 				cin >> newwriter;
 				cout << "请输入书的简介：" << endl;
@@ -581,15 +804,44 @@ void add_book(book *head)
 				cout << "请输入书的备注：" << endl;
 				cin >> newremark;
 				q = (book *)malloc(sizeof(book));
+				strcpy_s(q->spell, strlen(newspell) + 1, newspell);
+				strcpy_s(q->type, strlen(newtype) + 1, newtype);
 				strcpy_s(q->ISBN, strlen(newisbn) + 1, newisbn);
 				strcpy_s(q->book_name, strlen(a) + 1, a);
 				strcpy_s(q->writer, strlen(newwriter) + 1, newwriter);
 				strcpy_s(q->intro, strlen(newintro) + 1, newintro);
 				strcpy_s(q->remark, strlen(newremark) + 1, newremark);
+				strcpy_s(q->is_or_no, strlen("否") + 1, "否");
+				q->popular = 0;
 				q->repertory = 0;
 				q->repertory++;
 				q->standing_stock = 0;
 				q->standing_stock++;
+				sqlstr = "INSERT INTO book VALUES('";
+				sqlstr += q->ISBN;
+				sqlstr += "','";
+				sqlstr += q->book_name;
+				sqlstr += "','";
+				sqlstr += q->spell;
+				sqlstr += "','";
+				sqlstr += q->type;
+				sqlstr += "','";
+				sqlstr += q->writer;
+				sqlstr += "','";
+				sqlstr += q->intro;
+				sqlstr += "','";
+				sqlstr += q->is_or_no;
+				sqlstr += "',";
+				char ss[MAXSIZE];
+				sqlstr += itoa(q->standing_stock, ss, 10);
+				sqlstr += ",";
+				sqlstr += itoa(q->repertory, ss, 10);
+				sqlstr += ",'";
+				sqlstr += q->remark;
+				sqlstr += "',";
+				sqlstr += itoa(q->popular, ss, 10);
+				sqlstr += ")";
+				mysql_query(&mysql, sqlstr.c_str());
 				pre->next = q;
 				q->next = NULL;
 				cout << "添加成功！" << endl;
@@ -600,9 +852,13 @@ void add_book(book *head)
 			}
 		} while (nnum == 1);
 	}
+	mysql_close(&mysql);
+	printf("按任意键返回上一级\n");
+	while (_getch())
+		teacher_menu(head, t, st, bs, root, bp);
 }
 //修改图书信息
-void modify_book(book *head)        /*修改图书信息*/
+void modify_book(book *head, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)        /*修改图书信息*/
 {
 	char book_name[50];
 	book *p, *pre = NULL;
@@ -659,120 +915,16 @@ void modify_book(book *head)        /*修改图书信息*/
 	else
 	{
 		cout << "此书不存在！！" << endl;
-		cout << "按任意键返回主菜单！" << endl;
 		system("pause");
+		printf("按任意键返回上一级\n");
+		while (_getch())
+			teacher_menu(head, t, st, bs, root, bp);
 	}
+	printf("按任意键返回上一级\n");
+	while (_getch())
+		teacher_menu(head, t, st, bs, root, bp);
 }
-//字典树
-typedef struct tire_node {
-	int count;		//记录该节点代表的单词个数
-	char word[MAXSIZE];
-	bool isStr;		//标记该节点是否构成完整单词
-	struct tire_node *children[MAXSIZE];	//各个子节点
-} tire;
-tire *initTire() {	//初始化
-	tire *root;
-	root = (tire *)malloc(sizeof(tire));
-	root->count = 0;
-	root->isStr = FALSE;
-	int i;
-	for (i = 0; i < MAXSIZE; i++)
-	{
-		root->children[i] = NULL;
-	}
-	return root;
-}
-void tireInsert(tire **root, char *word) {
-	tire *node = *root;
-	int i = 0;
-	int j;
-	int id;
-	while (word[i])
-	{
-		id = word[i] - 'a';
-		if (!node->children[id])
-		{
-			node->children[id] = new tire();	//开辟空间
-			for (j = 0; j < MAXSIZE; j++)
-			{
-				node->children[id]->children[j] = NULL;
-			}
-			node->children[id]->count = 0;
-			node->children[id]->isStr = FALSE;
-		}
-		node = node->children[id];
-		node->count++;
-		i++;
-	}
-	node->isStr = TRUE;
-	strcpy_s(node->word, strlen(word) + 1, word);
-}
-tire * tireSearch(tire *root, char *word) {
-	tire *node = root;
-	int i = 0;
-	while (word[i])
-	{
-		int id = word[i] - 'a';
-		if (node->children[id])
-		{
-			node = node->children[id];
-			i++;
-		}
-		else
-		{
-			return NULL;
-		}
-	}
-	return node;
-}
-//通过书的完整拼音输出其全部信息
-void printSpell(book *bo, char *sp, int *count) {
-	book *p = bo;
-	while (p)
-	{
-		if (strcmp(p->spell, sp) == 0)
-		{
-			p->number = (*count)++;
-			printf("|%-6d%-15s%-20s%-13s%-12s%-10s%-5d%5d  |\n", p->number, p->ISBN, p->book_name, p->writer, p->type, p->is_or_no, p->repertory, p->standing_stock);
-		}
-		p = p->next;
-	}
-}
-//BFS遍历打印出满足前缀的图书信息
-void printTire(book *bo, tire *root, char *front) {
-	int count = 1;
-	tire *node = tireSearch(root, front);
-	int i;
-	if (!node)
-	{
-		cout << "未匹配到您需要的信息，请重新输入" << endl;
-	}
-	else
-	{
-		cout << endl;
-		cout << "|---------------------------------------图书信息-----------------------------------------|" << endl;
-		cout << "|序号  编号           书名                作者         类别    是否借出   馆藏量   现存量|" << endl;
-		tire *queue[MAXSIZE];
-		int left = 0, right = 0;
-		queue[right++] = node;
-		while (left < right)
-		{
-			tire *p = queue[left++];
-			if (p->count != 0 && p->isStr)
-			{
-				printSpell(bo, p->word, &count);
-				//cout << p->word << p->isStr << endl;
-			}
-			for (i = 0; i < MAXSIZE; i++)
-			{
-				if (p->children[i])
-				{
-					queue[right++] = p->children[i];
-				}
-			}
-		}
-	}
-}
+
 //shell排序
 /*void shellsort(char** strs, int n){	int len = 0;	int i, j, d;	char **s;	s = (char**)malloc(sizeof(char*)*MAXSIZE);	s[0] = (char*)malloc(sizeof(char) * 20);	i = 0;	while (i < n)	{		//cout << strs[i] << endl;		s[i + 1] = (char*)malloc(sizeof(char) * 20);		s[i + 1] = strs[i];		i++;	}	len = n;	s[i + 1] = (char*)malloc(sizeof(char) * 20);	s[i + 1] = '\0';	d = len / 2;	while (d >= 1)	{		for (i = d + 1; i <= len; i++)		{			s[0] = s[i];			j = i - d;			while (j > 0 && strcmp(s[0], s[j]) < 0)			{				s[j + d] = s[j];				j = j - d;			}			s[j + d] = s[0];		}		d = d / 2;	}	for (i = 1; i <= len; i++)	{		printf("%s\n", s[i]);		//cout << s[i] << endl;	}	system("pause");}*/
 void MySql() {
@@ -838,6 +990,7 @@ void MySql() {
 	else {
 		cout << "mysql_query() create book failed" << endl;
 		mysql_close(&mysql);
+		system("pause");
 		exit(-1);
 	}
 	system("pause");
@@ -903,31 +1056,31 @@ void MySql() {
 
 	//向表中插入数据
 	sqlstr =
-		"INSERT INTO book VALUES('9787544285147','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','是',2,6,'借阅量大，需加购',4),";
-	sqlstr += "('9787544285148','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','否',2,6,'借阅量大，需加购',4),";
-	sqlstr += "('9787544285149','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','否',2,6,'借阅量大，需加购',4),";
-	sqlstr += "('9787544285150','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','否',2,6,'借阅量大，需加购',4),";
-	sqlstr += "('9787544285151','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','否',2,6,'借阅量大，需加购',4),";
-	sqlstr += "('9787544285152','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','是',2,6,'借阅量大，需加购',4),";
-	sqlstr += "('9787020024759','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','否',3,5,'无',2),";
-	sqlstr += "('9787020024760','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','否',3,5,'无',2),";
-	sqlstr += "('9787020024761','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','是',3,5,'无',2),";
-	sqlstr += "('9787020024762','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','是',3,5,'无',2),";
-	sqlstr += "('9787020024763','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','是',3,5,'无',2),";
-	sqlstr += "('9787020049295','平凡的世界','pingfandeshijie','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象','否',0,3,'一本严重损坏，需丢弃',3),";
-	sqlstr += "('9787020049296','平凡的世界','pingfandeshijie','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象','否',0,3,'一本严重损坏，需丢弃',3),";
-	sqlstr += "('9787020049297','平凡的世界','pingfandeshijie','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象','否',0,3,'一本严重损坏，需丢弃',3),";
-	sqlstr += "('9787020026906','白鹿原','bailuyuan','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。','否',1,3,'无',2),";
-	sqlstr += "('9787020026907','白鹿原','bailuyuan','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。','否',1,3,'无',2),";
-	sqlstr += "('9787020026908','白鹿原','bailuyuan','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。','是',1,3,'无',2),";
-	sqlstr += "('9787549529322','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','否',3,5,'无',2),";
-	sqlstr += "('9787549529323','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','否',3,5,'无',2),";
-	sqlstr += "('9787549529324','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','是',3,5,'无',2),";
-	sqlstr += "('9787549529325','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','是',3,5,'无',2),";
-	sqlstr += "('9787549529326','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','是',3,5,'无',2),";
-	sqlstr += "('9787508645056','你的孤独，虽败犹荣','nidegudusuibaiyourong','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。','是',3,3,'无效',0),";
-	sqlstr += "('9787508645057','你的孤独，虽败犹荣','nidegudusuibaiyourong','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。','是',3,3,'无效',0),";
-	sqlstr += "('9787508645058','你的孤独，虽败犹荣','nidegudusuibaiyourong','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。','是',3,3,'无效',0)";
+		"INSERT INTO book VALUES('9787544285147','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','否',2,6,'借阅量大，需加购',4),";
+	sqlstr += "('9787544285148','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','是',2,6,'借阅量大，需加购',4),";
+	sqlstr += "('9787544285149','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','是',2,6,'借阅量大，需加购',4),";
+	sqlstr += "('9787544285150','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','是',2,6,'借阅量大，需加购',4),";
+	sqlstr += "('9787544285151','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','是',2,6,'借阅量大，需加购',4),";
+	sqlstr += "('9787544285152','恶意','eyi','文学','东野圭吾','《恶意》深刻揭示人性，故事中无边的恶意深不见底，有如万丈深渊，让人不寒而栗。从未遇到这样的案子：杀人不是目的，而是手段；死亡不是结束，而是开始。','否',2,6,'借阅量大，需加购',4),";
+	sqlstr += "('9787020024759','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','是',3,5,'无',2),";
+	sqlstr += "('9787020024760','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','是',3,5,'无',2),";
+	sqlstr += "('9787020024761','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','否',3,5,'无',2),";
+	sqlstr += "('9787020024762','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','否',3,5,'无',2),";
+	sqlstr += "('9787020024763','围城','weicheng','文学','钱钟书','《围城》是中国现代文学史上一部风格独特的讽刺小说，被誉为“新儒林外史”。故事主要写抗战初期知识分子的群相。','否',3,5,'无',2),";
+	sqlstr += "('9787020049295','平凡的世界','pingfandeshijie','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象','是',0,3,'一本严重损坏，需丢弃',3),";
+	sqlstr += "('9787020049296','平凡的世界','pingfandeshijie','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象','是',0,3,'一本严重损坏，需丢弃',3),";
+	sqlstr += "('9787020049297','平凡的世界','pingfandeshijie','文学','路遥','《平凡的世界》是一部现实主义小说，也是一部小说形式的家族史。作者浓缩料中国西北农村的历史变迁过程，在小说中全景式地表现了中国当代城乡的社会生活。在近十年的广阔背景下，通过复杂的矛盾纠葛，刻划社会格阶层众多普通人的形象','是',0,3,'一本严重损坏，需丢弃',3),";
+	sqlstr += "('9787020026906','白鹿原','bailuyuan','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。','是',1,3,'无',2),";
+	sqlstr += "('9787020026907','白鹿原','bailuyuan','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。','是',1,3,'无',2),";
+	sqlstr += "('9787020026908','白鹿原','bailuyuan','文学','陈忠实','这是一部渭河平原五十年变迁的雄奇史诗，一轴中国农村斑斓多彩、触目惊心的长幅画卷。主人公六娶六丧，神秘的序曲暗示着不祥。一个家族两代子孙，为争夺白鹿原的统治代代斗争不已，上演了一幕幕惊心动魄的活剧。','否',1,3,'无',2),";
+	sqlstr += "('9787549529322','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','是',3,5,'无',2),";
+	sqlstr += "('9787549529323','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','是',3,5,'无',2),";
+	sqlstr += "('9787549529324','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','否',3,5,'无',2),";
+	sqlstr += "('9787549529325','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','否',3,5,'无',2),";
+	sqlstr += "('9787549529326','看见','kanjian','历史','柴静','《看见》是著名记者和主持人柴静讲述央视十年历程的自传性作品，既是柴静个人的成长告白书，某种程度上亦可以视作中国十年变迁的备忘录','否',3,5,'无',2),";
+	sqlstr += "('9787508645056','你的孤独，虽败犹荣','nidegudusuibaiyourong','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。','否',3,3,'无效',0),";
+	sqlstr += "('9787508645057','你的孤独，虽败犹荣','nidegudusuibaiyourong','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。','否',3,3,'无效',0),";
+	sqlstr += "('9787508645058','你的孤独，虽败犹荣','nidegudusuibaiyourong','爱情','刘同','孤独之所以迷茫，孤独之后是成长。这本书里记录了33种孤独感，希望能让你想起自己某种忘我无形的成长。最后。愿你比别人更不怕一个人独处，愿日后想起时你会被自己感动。','否',3,3,'无效',0)";
 	if (0 == mysql_query(&mysql, sqlstr.c_str())) {
 		cout << "mysql_query() insert 1data succeed" << endl;
 	}
@@ -1005,46 +1158,16 @@ void initData(book **bo, student **st, teacher_sequence *t, borrow_sequence *bs,
 	MYSQL mysql;
 	string sqlstr;
 	//初始化数据库
-	if (0 == mysql_library_init(0, NULL, NULL)) {
-		cout << "mysql_library_init() succeed" << endl;
-	}
-	else {
-		cout << "mysql_library_init() failed" << endl;
-		exit(-1);
-	}
-	system("pause");
+	mysql_library_init(0, NULL, NULL);
 	//初始化数据结构
-	if (NULL != mysql_init(&mysql)) {
-		cout << "mysql_init() succeed" << endl;
-	}
-	else {
-		cout << "mysql_init() failed" << endl;
-		exit(1);
-	}
-	system("pause");
+	mysql_init(&mysql);
 	//在连接数据库之前，设置额外的连接选项
 	//可以设置的选项很多，这里设置字符集，否则无法处理中文
-	if (0 == mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk")) {
-		cout << "mysql_options() succeed" << endl;
-	}
-	else {
-		cout << "mysql_options() failed" << endl;
-		exit(-1);
-	}
-	system("pause");
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
 	//连接数据库
-	if (NULL
-		!= mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0))
-		//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
-	{
-		cout << "mysql_real_connect() succeed" << endl;
-	}
-	else {
-		cout << "mysql_real_connect() failed" << endl;
-		exit(-1);
-	}
-	system("pause");
-	//初始化字典树
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+//初始化字典树
 	*root = initTire();
 	MYSQL_RES *result;
 	MYSQL_FIELD *field;
@@ -1257,7 +1380,7 @@ void initData(book **bo, student **st, teacher_sequence *t, borrow_sequence *bs,
 	//system("pause");
 }
 //输出所有图书信息
-void displaybook(book *bo)
+void displaybook(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID)
 {
 	int count = 1;
 	book *p;
@@ -1272,7 +1395,9 @@ void displaybook(book *bo)
 		printf("|%-6d%-15s%-20s%-13s%-12s%-10s%-5d%5d  |\n", p->number, p->ISBN, p->book_name, p->writer, p->type, p->is_or_no, p->repertory, p->standing_stock);
 		p = p->next;
 	}
-
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	student_menu(bo, t, st, bs, root, bp, student_ID);
 }
 //展示书的详细信息
 void displaydetailed(book **bo) {
@@ -1295,20 +1420,25 @@ void displaydetailed(book **bo) {
 		{
 			pre->popular++;
 		}
-		cout << "popular = " << pre->popular << endl;
 		pre = pre->next;
 
 	}
 }
 //输出学生信息
-void displaystudent(student  *st) {
-	student *p;
-	p = st;
+void displaystudent(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp) {
+	system("cls");
+	student *p = st;
+	printf("|------------------------------------------------------------------------学生信息表-------------------------------------------------------------------|\n");
+	printf("|学生学号        学生姓名        学生性别     学生电话      所在系别      学生生效时间      学生失效时间       欠费金额         累计借书量        备注|\n");
 	while (p)
 	{
-		cout << p->student_ID << "---" << p->student_name << "---" << p->student_sex << "---" << p->student_phone << "---" << p->department << "---" << p->Arrearge << endl;
+		printf("%-20s%-15s%-10s%-15s%-15s%-20s%-18s%-16d%-17d%-10s\n", p->student_ID,p->student_name,p->student_sex,p->student_phone,p->department,p->take_effect,p->lose_efficay,p->Arrearge,p->boorow_sum,p->remark);
 		p = p->next;
 	}
+
+	printf("按任意键返回上一级\n");
+	while (_getch())
+		teacher_menu(bo, t, st, bs, root, bp);
 }
 //输出老师信息表
 void displayteacher(teacher_sequence *t) {
@@ -1320,15 +1450,40 @@ void displayteacher(teacher_sequence *t) {
 		printf("||     %-5s          %-7s                %-2s            %-11s      ||\n", t->te[i].job_number, t->te[i].teacher_name, t->te[i].teacher_sex, t->te[i].teacher_phone);
 	}
 }
-//输出借阅信息表
-void displayborrow(borrow_sequence *bs) {
+//根据学号查找学生的借阅信息
+void showstudentborrow(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID) {
+	student *p = st;
 	int i;
-	printf("|----------------------------图书借阅信息--------------------|\n");
-	printf("|编号  书名        作者        类别     借书学生学号|\n");
-	for (i = 1; i <= bs->length; i++)
+	printf("|-------------------------------图书借阅信息--------------------------|\n");
+	printf("|书号  学生学号        借书日期        还书日期     是否续借      备注|\n");
+	while (p)
 	{
-		cout << bs->bt[i].ISBN << "--" << bs->bt[i].student_ID << endl;
+		if (strcmp(p->student_ID, student_ID) == 0)
+		{
+			for (i = 1; i <= p->length; i++)
+			{
+				printf("%-10s%-10s%-10s%-10s%-10s%-10s\n", p->borrow[i].ISBN, p->borrow[i].student_ID, p->borrow[i].boorow_time, p->borrow[i].return_time, p->borrow[i].isrenew, p->borrow[i].remark);
+			}
+		}
+		p = p->next;
 	}
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	student_menu(bo, t, st, bs, root, bp, student_ID);
+}
+//输出借阅信息表
+void displayborrow(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp) {
+	int i;
+	printf("|---------------------------------------图书借阅信息----------------------------------|\n");
+	printf("|  书号             学生学号          借书日期         还书日期     是否续借      备注|\n");
+	for (i = 1; i <= bs.length; i++)
+	{
+		cout << " " << bs.bt[i].ISBN << "     " << bs.bt[i].student_ID << "           " << bs.bt[i].boorow_time << "        " << bs.bt[i].return_time << "        " << bs.bt[i].isrenew << "         " << bs.bt[i].remark << endl;
+	}
+
+	printf("按任意键返回上一级\n");
+	while (_getch())
+		teacher_menu(bo, t, st, bs, root, bp);
 }
 //根据书籍类别查询图书信息
 void SeeBook(book *bo, char *type) {
@@ -1347,7 +1502,7 @@ void SeeBook(book *bo, char *type) {
 
 }
 //根据学号查看借阅信息
-void SeeBorrow(student *st, char id[]) {
+void SeeBorrow(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID, char id[]) {
 	student * p;
 	int i;
 	p = st;
@@ -1362,6 +1517,11 @@ void SeeBorrow(student *st, char id[]) {
 			}
 		}
 		p = p->next;
+	}
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	{
+		student_menu(bo, t, st, bs, root, bp, student_ID);
 	}
 }
 
@@ -1594,24 +1754,25 @@ void mergesortpopular(bookpopular *tab)
 	}
 }
 //图书推荐函数
-void display_popular(bookpopular *bp) {
-	mergesortpopular(bp);
+void display_popular(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID) {
+	system("cls");
+	mergesortpopular(&bp);
 	int i;
 	book save[MAXSIZE];
 	int top = 0;
 	cout << endl;
 	cout << "|-----------------------------------图书推荐榜-------------------------------------|" << endl;
 	cout << "|编号           书名                作者         类别    是否借出   馆藏量   现存量|" << endl;
-	for (i = bp->length; i >= 1; i--)
+	for (i = bp.length; i >= 1; i--)
 	{
-		if (bp->bp[i].repertory == 1)
+		if (bp.bp[i].repertory == 1)
 		{
-			save[top++] = bp->bp[i];
+			save[top++] = bp.bp[i];
 		}
 
-		else if (strcmp(bp->bp[i].book_name, bp->bp[i - 1].book_name) != 0)
+		else if (strcmp(bp.bp[i].book_name, bp.bp[i - 1].book_name) != 0)
 		{
-			save[top++] = bp->bp[i];
+			save[top++] = bp.bp[i];
 		}
 		//printf("|%-6d%-15s%-20s%-13s%-12s%-10s%-5d%5d  |\n", bp->bp[i].number, bp->bp[i].ISBN, bp->bp[i].book_name, bp->bp[i].writer, bp->bp[i].type, bp->bp[i].is_or_no, bp->bp[i].repertory, bp->bp[i].standing_stock);
 	}
@@ -1619,6 +1780,9 @@ void display_popular(bookpopular *bp) {
 	{
 		printf("|%-15s%-20s%-13s%-12s%-10s%-5d%5d  |\n", save[i].ISBN, save[i].book_name, save[i].writer, save[i].type, save[i].is_or_no, save[i].repertory, save[i].standing_stock);
 	}
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	student_menu(bo, t, st, bs, root, bp, student_ID);
 }
 //堆排序算法对老师信息进行排序
 void siftTeacher(teacher_sequence *t, int k, int m) {		//筛选算法
@@ -1826,15 +1990,38 @@ void  display_book_type(book *head, char book_type[])
 //借书刷新库存，参数为头节点  和 所借书名
 book * refresh(book * head, char borrowed_name[30])
 {
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
 	book *p = head;
+	int count;
 	while (p)
 	{
 		if (strcmp(borrowed_name, p->book_name) == 0)
 		{
 			p->standing_stock--;
+			count = p->standing_stock;
 		}
 		p = p->next;
 	}
+	sqlstr = "update book set standing_stock = ";
+	char ss[MAXSIZE];
+	sqlstr += itoa(count, ss, 10);
+	sqlstr += " where book_name = '";
+	sqlstr += borrowed_name;
+	sqlstr += "'";
+	mysql_query(&mysql, sqlstr.c_str());
+	mysql_close(&mysql);
 	return head;
 }
 //还书时间函数
@@ -1866,11 +2053,22 @@ char *returnbooktime()              /*时间函数*/
 //借书完成 刷新 学生信息表  参数为借书学生学号，学生信息表指针，所借书号
 student * refresh_student(char borrowed_stu_ID[20], student * stu_head, char borrowed_ISBN[30])
 {
-
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
 	student * p = stu_head;
 	while (p&&strcmp(p->student_ID, borrowed_stu_ID) != 0)
 	{
-		cout << "emmm" << endl;
 		p = p->next;
 	}
 	//借阅总数加一
@@ -1881,6 +2079,13 @@ student * refresh_student(char borrowed_stu_ID[20], student * stu_head, char bor
 	strcpy_s(p->borrow[t].ISBN, 30, borrowed_ISBN);
 	strcpy_s(p->borrow[t].isrenew, 10, "否");
 	strcpy_s(p->borrow[t].student_ID, 20, borrowed_stu_ID);
+	sqlstr = "update student set borrow_sum = ";
+	char ss[MAXSIZE];
+	sqlstr += itoa(p->boorow_sum, ss, 10);
+	sqlstr += " where student_ID = '";
+	sqlstr += borrowed_stu_ID;
+	sqlstr += "'";
+	mysql_query(&mysql, sqlstr.c_str());
 
 	//借书日期
 	char str[MAXSIZE];
@@ -1889,16 +2094,41 @@ student * refresh_student(char borrowed_stu_ID[20], student * stu_head, char bor
 	//还书日期
 	strcpy_s(str, strlen(returnbooktime()) + 1, returnbooktime());
 	strcpy_s(p->borrow[t].return_time, 30, str);
+	sqlstr = "INSERT INTO borrowing_table VALUES('";
+	sqlstr += borrowed_ISBN;
+	sqlstr += "','";
+	sqlstr += borrowed_stu_ID;
+	sqlstr += "','";
+	sqlstr += p->borrow[t].boorow_time;
+	sqlstr += "','";
+	sqlstr += p->borrow[t].return_time;
+	sqlstr += "','否','无')";
+	mysql_query(&mysql, sqlstr.c_str());
+	mysql_close(&mysql);
 	return stu_head;
 }
 //输入借书号进行借书
-void input_num(book *head, student *stu)
+void input_num(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID)
 {
+
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
 	printf("请输入你想借图书的书号：\n");
 	char temp_num[20];
 	scanf_s("%s", temp_num, 20);
 	book *p;
-	p = head;
+	p = bo;
 	while (strcmp(p->ISBN, temp_num) != 0)
 	{
 		p = p->next;
@@ -1906,11 +2136,11 @@ void input_num(book *head, student *stu)
 	if (!p)
 	{
 		printf("没有该图书，请重新输入:\n");
-		input_num(head, stu);
+		input_num(bo, t, st, bs, root, bp, student_ID);
 	}
 	else
 	{
-		if (strcmp(p->is_or_no, "是") == 0)
+		if (strcmp(p->is_or_no, "否") == 0)
 		{
 			printf("查找成功，正在为您借书......\n");
 
@@ -1925,39 +2155,48 @@ void input_num(book *head, student *stu)
 			if (strcmp(temp_ID, "1410024336") == 0 && strcmp(temp_key, "1") == 0)
 			{
 				printf("借书成功!\n");
-				strcpy_s(p->is_or_no, 10, "否");
-
+				strcpy_s(p->is_or_no, 10, "是");
+				sqlstr = "update book set is_or_no = '是' where ISBN = '";
+				sqlstr += temp_num;
+				sqlstr += "'";
+				if (mysql_query(&mysql, sqlstr.c_str()) == 0)
+					cout << "数据库刷新" << endl;
+				mysql_close(&mysql);
 				//此处刷新图书库存
 				char borrowed_book_name[30];
 				strcpy_s(borrowed_book_name, 20, p->book_name);
 
-				head = refresh(head, borrowed_book_name);
+				bo = refresh(bo, borrowed_book_name);
 				//display(new_head);
 
 				//此处刷新学生信息表,参数：学生学号，学生表指针，所借图书号，
 				//student * stu;
-				stu = refresh_student(temp_ID, stu, temp_num);
+				st = refresh_student(temp_ID, st, temp_num);
 			}
 		}
 		else
 		{
 			printf("您所选书籍已经被借走，请重新进行选择!\n");
-			input_num(head, stu);
+			input_num(bo, t, st, bs, root, bp, student_ID);
 		}
 	}
+	printf("按任意键返回上一级\n");
+	system("pause");
+	student_menu(bo, t, st, bs, root, bp, student_ID);
 }
 //借书
-void borrow_book(book *bo, tire *root, student *stu)
+void borrow_book(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID)
 {
+	system("cls");
 	printf("******************************兄dei,请进行以下选择!!!************************\n");
 	printf("**                  1.我知道自己想借什么书                                 **\n");
 	printf("**                  2.我有点方(□),只知道想借那类型的书                    **\n");
 	printf("**                  3.我目前方的雅痞，我想查看所有的书                     **\n");
 	printf("*****************************************************************************\n");
 
-	int t;
-	scanf_s("%d", &t, 1);
-	if (t == 1)
+	int tt;
+	scanf_s("%d", &tt, 1);
+	if (tt == 1)
 	{
 
 		/****************以下应进行修改 ***************
@@ -1967,11 +2206,11 @@ void borrow_book(book *bo, tire *root, student *stu)
 		char s[MAXSIZE];
 		cout << "请输入您想借的书的拼音" << endl;
 		cin >> s;
-		printTire(bo, root, s);
-		input_num(bo, stu);
+		printTire(bo, t, st, bs, root, bp, student_ID, s);
+		input_num(bo, t, st, bs, root, bp, student_ID);
 
 	}
-	else if (t == 2)
+	else if (tt == 2)
 	{
 		char temp_book_type[30];
 		printf("请输入你想借哪类型的书:\n");
@@ -1986,21 +2225,21 @@ void borrow_book(book *bo, tire *root, student *stu)
 		****************************************************/
 		book *head = bo;
 		display_book_type(head, temp_book_type);
-		input_num(bo, stu);
+		input_num(bo, t, st, bs, root, bp, student_ID);
 
 		//input_num(head);
 
 
 	}
-	else if (t == 3)
+	else if (tt == 3)
 	{
-		displaybook(bo);
-		input_num(bo, stu);
+		displaybook(bo, t, st, bs, root, bp, student_ID);
+		input_num(bo, t, st, bs, root, bp, student_ID);
 	}
 	else
 	{
 		printf("输入错误，请重新进行选择");
-		borrow_book(bo, root, stu);
+		borrow_book(bo, t, st, bs, root, bp, student_ID);
 	}
 }
 //快速排序
@@ -2035,8 +2274,21 @@ void quicksort(borrow_sequence *head3, int left, int right)
 	}
 }
 //根据图书名称进行删除
-book * delete_book(book *head)
+book * delete_book(book *head, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)
 {
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
 	printf("请输入你要删除的书名:\n");
 	char delete_book_name[50];
 	scanf_s("%s", delete_book_name, 50);
@@ -2045,7 +2297,7 @@ book * delete_book(book *head)
 	if (!(head))
 	{
 		printf("图书信息表为空，无法进行删除！请重新输入：\n");
-		delete_book(head);
+		delete_book(head, t, st, bs, root, bp);
 	}
 
 	//链表遍历判断输入的书是否可以删除
@@ -2059,7 +2311,7 @@ book * delete_book(book *head)
 	if (!p)  //p为空，表示没有此书，无法进行删除
 	{
 		printf("抱歉!未在图书信息表找到该书！请重新输入：\n");
-		delete_book(head);
+		delete_book(head, t, st, bs, root, bp);
 	}
 	else
 	{
@@ -2085,14 +2337,22 @@ book * delete_book(book *head)
 					p = p->next;
 				}
 			}
+			sqlstr = "delete from book where book_name = '";
+			sqlstr += delete_book_name;
+			sqlstr += "'";
+			mysql_query(&mysql, sqlstr.c_str());
+			mysql_close(&mysql);
 			printf("删除成功！\n");
+			printf("按任意键返回上一级\n");
+			while (_getch())
+				teacher_menu(head, t, st, bs, root, bp);
 			return  head;
 		}
 
 		else
 		{
 			printf("您输入的图书为有效书籍，不能进行删除!,请重新输入：\n");
-			delete_book(head);
+			delete_book(head, t, st, bs, root, bp);
 		}
 	}
 	return  head;
@@ -2100,6 +2360,19 @@ book * delete_book(book *head)
 //还书完成刷新图书信息表
 book * returned_book(book *book_head, char return_book_ID[20])
 {
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
 	book *p = book_head;
 
 	//记录还书的书名
@@ -2109,28 +2382,55 @@ book * returned_book(book *book_head, char return_book_ID[20])
 	{
 		if (strcmp(return_book_ID, p->ISBN) == 0)
 		{
-			strcpy_s(p->is_or_no, 10, "是");
+			strcpy_s(p->is_or_no, 10, "否");
 			strcpy_s(temp_name, 50, p->book_name);
 		}
 		p = p->next;
 	}
+	sqlstr = "update book set is_or_not = '否' where ISBN = '";
+	sqlstr += return_book_ID;
+	sqlstr += "'";
+	mysql_query(&mysql, sqlstr.c_str());
 	book *q = book_head;
+	int count;
 	//将同名书的在管量都+1;
 	while (q)
 	{
 		if (strcmp(temp_name, q->book_name) == 0)
 		{
 			q->standing_stock++;
+			count = q->standing_stock;
 		}
 		q = q->next;
 	}
+	sqlstr = "update book set standing_stock = ";
+	char ss[MAXSIZE];
+	sqlstr += itoa(count, ss, 10);
+	sqlstr += " where book_name = '";
+	sqlstr += temp_name;
+	sqlstr += "'";
+	mysql_query(&mysql, sqlstr.c_str());
+	mysql_close(&mysql);
 	return book_head;
 }
 
 //还书完成刷新学生信息和借阅信息表  参数：还书学生学号， 学生信息表指针，还书书号
-student * returned_student(char returned_stu_ID[20], student * stu_head, char returned_ISBN[30])
+student * returned_student(char returned_stu_ID[20], book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char returned_ISBN[30])
 {
-	student * p = stu_head;
+	MYSQL mysql;
+	string sqlstr;
+	mysql_library_init(0, NULL, NULL);
+	//初始化数据结构
+	mysql_init(&mysql);
+	//在连接数据库之前，设置额外的连接选项
+	//可以设置的选项很多，这里设置字符集，否则无法处理中文
+	mysql_options(&mysql, MYSQL_SET_CHARSET_NAME, "gbk");
+	//连接数据库
+	mysql_real_connect(&mysql, "localhost", "root", "123456", "datastructdesign", 3306, NULL, 0);
+	//这里的地址，用户名，密码，端口可以根据自己本地的情况更改
+	cout << "数据库连接成功" << endl;
+	system("pause");
+	student * p = st;
 	while (p&&strcmp(returned_stu_ID, p->student_ID) != 0)
 	{
 		p = p->next;
@@ -2146,16 +2446,28 @@ student * returned_student(char returned_stu_ID[20], student * stu_head, char re
 		printf("您已超期借书，需要支付相应的费用！\n");
 		printf("此处默认已经支付费用.\n");
 	}
+	sqlstr = "delete from borrowing_table where ISBN = '";
+	sqlstr += returned_ISBN;
+	sqlstr += "'";
+	mysql_query(&mysql, sqlstr.c_str());
 	for (; i < p->boorow_sum; i++)
 	{
 		p->borrow[i] = p->borrow[i + 1];
 	}
 	p->boorow_sum--;
+	sqlstr = "update student set borrow_sum = ";
+	char ss[MAXSIZE];
+	sqlstr += itoa(p->boorow_sum, ss, 10);
+	sqlstr += " where student_ID = '";
+	sqlstr += returned_stu_ID;
+	sqlstr += "'";
+	mysql_query(&mysql, sqlstr.c_str());
+	mysql_close(&mysql);
 	printf("还书成功!\n");
-	return stu_head;
+	return st;
 }
 //还书
-void return_book(student *st,book *bo)
+void return_book(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID)
 {
 	printf("您好，请输入你的学号和密码：\n");
 	char temp_ID[20];
@@ -2172,15 +2484,42 @@ void return_book(student *st,book *bo)
 		printf("以下为你目前所有的借书情况：\n");
 
 		//展示学生借书情况
-		SeeBorrow(st, temp_ID);
+		SeeBorrow(bo, t, st, bs, root, bp, student_ID, temp_ID);
 
 		printf("\n请输入你要还书的书号：\n");
 		char temp_return_book[20];
 		scanf_s("%s", temp_return_book, 20);
 		returned_book(bo, temp_return_book);
-		returned_student(temp_ID, st, temp_return_book);
+		returned_student(temp_ID, bo, t, st, bs, root, bp, temp_return_book);
 	}
 
+}
+void clock_delay(int n)/*时间延时函数*/
+{
+	clock_t tm;
+	tm = clock();
+	while (clock()<tm + n);
+}
+
+//成员介绍
+void adv()
+{
+	cout << "\n\n\n\n";
+	cout << "\t\t\t\t\t*================================*\n";
+	cout << "\t\t\t\t\t\t" << "本作品由四人共同努力完成" << endl;
+	cout << "\t\t\t\t\t\t" << "参与人员有:" << endl;
+	clock_delay(1000);
+	cout << "\t\t\t\t\t\t" << "组长：王佳豪" << endl;
+	clock_delay(1000);
+	cout << "\t\t\t\t\t\t" << "成员：王晋浩" << endl;
+	clock_delay(1000);
+	cout << "\t\t\t\t\t\t" << "成员：冯小涛" << endl;
+	clock_delay(1000);
+	cout << "\t\t\t\t\t\t" << "成员：原颖" << endl;
+	cout << "\t\t\t\t\t*================================*\n";
+	cout << "\n\n\n\n";
+	system("pause");
+	system("cls");
 }
 int main() {
 	//MySql();
@@ -2195,8 +2534,9 @@ int main() {
 	initData(&bo, &st, &t, &bs, &root, &bp);
 	st = addstudent(st);
 	addteacher(&t);
+	
 	//studentregistered(st);
-	teacherregistered(&t);
+	//teacherregistered(&t);
 	//bo = delete_book(bo);
 	//borrow_book(bo,root,st);
 
@@ -2209,21 +2549,279 @@ int main() {
 	displayteacher(&t);*/
 	//heapsortBorrow(&bs);
 	//mergesort(&bs);
-	/*quicksort(&bs, 1, bs.length);
-	displayborrow(&bs);*/
+
 	//updataMYSQLbook();
-	char x[] = "e";
+	/*char x[] = "e";*/
 	//SeeBook(bo, x);
 	//cout << tireSearch(root, x)->isStr << "----" << endl;
 	//printSpell(bo, x);
 	//printTire(bo, root, x);
-	//borrow_book(bo);
+	//borrow_book(bo,root,st);
+
 	//displaydetailed(&bo);
 	//updataMYSQLbook(bo);
 	//display_popular(&bp);
 	//add_book(bo);
-	/*return_book(st, bo);
-	displaybook(bo);*/
-	system("pause");
+	/*return_book(st, bo);*/
+	/*quicksort(&bs, 1, bs.length);
+	displayborrow(&bs);*/
+	//modify_book(bo);
+	//displaybook(bo);
+	//displaydetailed(&bo);
+	//system("pause");
+	system("color 3E");
+	adv();
+	system("title 图书管理系统");
+	printf("\n\n\n\n\n\n");
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("\t\t\t\t\t|* - * - * - * - * - * - * - * - *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*     欢迎使用图书管理系统！    *|\n");
+	printf("\t\t\t\t\t||      请按任意键进入系统！     ||\n");
+	printf("\t\t\t\t\t|*                               *|\n");
+	printf("\t\t\t\t\t|| - * - * - * - * - * - * - * - ||\n");
+	printf("\t\t\t\t\t*=================================*\n");
+	while (_getch())
+	{
+		menu(bo, t, st, bs, root, bp);
+	}
+
 	return 0;
+}
+//界面逻辑
+void menu(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)
+{
+	/*book *bo;
+	teacher_sequence t;
+	student *st;
+	borrow_sequence bs;
+	tire *root;
+	bookpopular bp;
+	st = StudentLink();
+	bo = BookLink();
+	initData(&bo, &st, &t, &bs, &root, &bp);
+	st = addstudent(st);
+	addteacher(&t);*/
+	system("color 3E");
+	int n;
+	system("cls");
+	printf("\n\n");
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("\t\t\t\t\t|* - * - * - * 主菜单* - * - * - *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*      [1]  学生登录            *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*      [2]  学生注册            *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*      [3]  老师登录            *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*      [4]  退出系统            *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|* - * - * - * - * - * - * - * - *|\n");
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("请输入您的选择（1-4）：");
+	scanf_s("%d", &n);
+	getchar();
+	menu_switch(bo, t, st, bs, root, bp, n);
+}
+
+//主菜单通道选择
+void menu_switch(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, int n)
+{
+	int i;
+	switch (n)
+	{
+	case 1:member(bo, t, st, bs, root, bp); break;
+	case 2:studentregistered(bo, t, st, bs, root, bp); break;
+	case 3:teacher_register(bo, t, st, bs, root, bp); break;
+	case 4:exit(1); system("pause"); break;
+	default:printf("操作错误，请重新输入（1-4）：");
+		cin >> i; menu_switch(bo, t, st, bs, root, bp, i); break;
+	}
+}
+
+void member(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)
+{
+
+	char student_ID[MAXSIZE];
+	char password[MAXSIZE];
+	
+	int i;
+	system("cls");
+	printf("\n\n\n");
+	printf("\t\t\t\t\t***=============================***\n\n");
+	printf("\t\t\t\t\t    账户（account）：");
+	cin >> student_ID;
+	printf("\t\t\t\t\t    密码（password）：");
+	cin >> password;
+	studentlanding(bo, t, st, bs, root, bp, student_ID, password);
+	//延时界面
+	//i=member_log_in(student_ID);
+	/*student *p = st;
+	while (p)
+	{
+		if (strcmp(p->student_ID, student_ID) == 0) {
+			break;
+		}
+		p = p->next;
+	}*/
+	/*if (1)
+	{
+		student_menu(bo, t, st, bs, root, bp, student_ID);
+	}*/
+}
+
+void student_menu(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID)
+{
+	//system("color 2E");
+	system("cls");
+	//登录者信息
+	//student_menu_id(st,student_ID,student_name);
+	//登录者可执行的功能
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("\t\t\t\t\t|* - * - * - * 功能表* - * - * - *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*      [1]  个人信息            *|\n");
+	printf("\t\t\t\t\t||      [2]  所有图书信息        ||\n");
+	printf("\t\t\t\t\t|*      [3]  搜索图书            *|\n");
+	printf("\t\t\t\t\t||      [4]  借阅书籍            ||\n");
+	printf("\t\t\t\t\t|*      [5]  归还书籍            *|\n");
+	printf("\t\t\t\t\t||      [6]  查询借阅表          ||\n");
+	printf("\t\t\t\t\t|*      [7]  图书欢迎度排行      *|\n");
+	printf("\t\t\t\t\t|*      [8]  退出登录            *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|* - * - * - * - * - * - * - * - *|\n");
+	printf("\t\t\t\t\t*=================================*\n");
+	int i;
+	printf("请输入需要执行的功能（1-8）：");
+	cin >> i;
+	student_menu_switch(bo, t, st, bs, root, bp, i, student_ID);
+}
+
+void student_menu_switch(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, int n, char *student_ID)
+{
+	int i;
+	switch (n)
+	{
+	case 1:print_student_information(bo, t, st, bs, root, bp, student_ID); break;//输出学生信息 并输出是否需要修改信息	
+	case 2:displaybook(bo, t, st, bs, root, bp, student_ID); break;//输出全部图书信息	
+	case 3: {
+		cout << "请输入您需要的书籍的拼音:" << endl;
+		char front[MAXSIZE];
+		cin >> front;
+		printTire(bo, t, st, bs, root, bp, student_ID, front);
+		break; }//查找
+	case 4:borrow_book(bo, t, st, bs, root, bp, student_ID); break;//借阅书籍
+	case 5:return_book(bo, t, st, bs, root, bp, student_ID); break;//还书
+	case 6:showstudentborrow(bo, t, st, bs, root, bp, student_ID); break;//查询借阅表
+	case 7:display_popular(bo, t, st, bs, root, bp, student_ID); break;//最受欢迎图书
+	case 8:menu(bo, t, st, bs, root, bp); break;//主菜单
+	default: {system("cls");
+		printf("操作错误，请重新输入（1-8）：");
+		cin >> i;
+		student_menu_switch(bo, t, st, bs, root, bp,i, student_ID); break; }
+	}
+}
+//会员个人信息
+void print_student_information(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, char *student_ID)
+{
+	system("cls");
+
+	student *p = st;
+	while (p)
+	{
+		if (strcmp(p->student_ID, student_ID) == 0)
+		{
+			break;
+		}
+		p = p->next;
+	}
+	//student_menu_id(st, student_ID,p->student_name);
+	printf("\n");
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("\t\t\t\t\t * - * - * - 个人信息* - * - * - * \n");
+	printf("\t\t\t\t\t                                   \n");
+	printf("\t\t\t\t\t       学号：%-20s\n", p->student_ID);
+	printf("\t\t\t\t\t       姓名：%-10s\n", p->student_name);
+	printf("\t\t\t\t\t       性别：%-10s\n", p->student_sex);
+	printf("\t\t\t\t\t       系别：%-20s\n", p->department);
+	printf("\t\t\t\t\t       联系方式：%-20s\n", p->student_phone);
+	printf("\t\t\t\t\t       累计借书量：%-5d\n", p->boorow_sum);
+	printf("\t\t\t\t\t       欠费金额：%-5d\n", p->Arrearge);
+	printf("\t\t\t\t\t       生效时间：%-30s\n", p->take_effect);
+	printf("\t\t\t\t\t       失效时间：%-30s\n", p->lose_efficay);
+	printf("\t\t\t\t\t                                   \n");
+	printf("\t\t\t\t\t * - * - * - * - * - * - * - * - * \n");
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("\n");
+	printf("按任意键返回上一级\n");
+	while (_getch())
+	student_menu(bo, t, st, bs, root, bp, p->student_ID);
+
+}
+
+//老师登录界面和其功能
+void teacher_register(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)
+{
+	int i;
+	char teacher_ID[20];
+	char password[30];
+	system("cls");
+	printf("\n\n\n");
+	printf("\t\t\t\t\t***=============================***\n\n");
+	printf("\t\t\t\t\t    账户（account）：");
+	gets_s(teacher_ID, 20);
+	printf("\t\t\t\t\t    密码（password）：");
+	gets_s(password, 30);
+	//密码比对
+	//比对成功则延时
+
+	if (1)
+	{
+		teacher_menu(bo, t, st, bs, root, bp);
+	}
+}
+
+
+//老师界面可执行的操作
+void teacher_menu(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp)
+{
+	system("cls");
+	//teacher_menu_id();//输出登陆者信息
+					  //登录者可执行的功能
+
+	printf("\t\t\t\t\t*=================================*\n");
+	printf("\t\t\t\t\t|* - * - * - * 功能表* - * - * - *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|*      [1]  添加图书            *|\n");
+	printf("\t\t\t\t\t||      [2]  删减图书            ||\n");
+	printf("\t\t\t\t\t|*      [3]  修改图书信息        *|\n");
+	printf("\t\t\t\t\t||      [4]  显示所有学生信息    ||\n");
+	printf("\t\t\t\t\t|*      [5]  显示所有借阅者信息  *|\n");
+	printf("\t\t\t\t\t|*      [6]  退出登录            *|\n");
+	printf("\t\t\t\t\t||                               ||\n");
+	printf("\t\t\t\t\t|* - * - * - * - * - * - * - * - *|\n");
+	printf("\t\t\t\t\t*=================================*\n");
+
+	int i;
+	printf("请输入要执行的功能（1-6）：");
+	scanf_s("%d", &i);
+	teacher_menu_switch(bo, t, st, bs, root, bp, i);
+}
+
+//老师界面具体操作方式
+void teacher_menu_switch(book *bo, teacher_sequence t, student *st, borrow_sequence bs, tire *root, bookpopular bp, int n)
+{
+	int i;
+	switch (n)
+	{
+	case 1:add_book(bo, t, st, bs, root, bp); break;//添加
+	case 2:delete_book(bo, t, st, bs, root, bp); break;//删除
+	case 3:modify_book(bo, t, st, bs, root, bp); break;//修改
+	case 4:displaystudent(bo, t, st, bs, root, bp); break;//所有会员信息
+	case 5:displayborrow(bo, t, st, bs, root, bp); break;//借阅者信息
+	case 6:menu(bo, t, st, bs, root, bp); break;
+	default:printf("操作错误，请重新输入（1-6）：");
+		scanf_s("%d", &i); getchar(); teacher_menu_switch(bo, t, st, bs, root, bp, i); break;
+	}
 }
