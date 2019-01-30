@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 class percePtron:
     def __init__(self):
-        self.weight = [0, 0]
-        self.bias = 0
+        self.weight = [0.0, 0.0]
+        self.bias = 0.0
 
     def draw(self, x1, x2, y1, y2):
         plt.scatter(x1, y1, label="y = 1")
@@ -15,21 +15,23 @@ class percePtron:
         plt.xlabel('X1')
         plt.ylabel('X2')
         label_x = np.linspace(0, 4, 20)
-       # print(-(self.bias + self.weight[0] * label_x) / self.weight[1])
+        # print(-(self.bias + self.weight[0] * label_x) / self.weight[1])
         plt.plot(label_x, -(self.bias + self.weight[0] * label_x) / self.weight[1])
         plt.show()
 
-    def train(self, data, learning_rate=0.5, step=100):
+    def train(self, data, learning_rate=0.1, step=1000):
         self.weight = np.array(self.weight)
         for i in range(step):
-            randomindex = random.randint(0,len(data)-1)
+            randomindex = random.randint(0, len(data) - 1)
             randomData = data[randomindex]
-            if randomData[2] * (self.weight[0] * randomData[0] + self.weight[1] * randomData[1] + self.bias) < 0:
-                self.weight[0] = (self.weight[0] + randomData[0]) * learning_rate
-                self.weight[1] = (self.weight[1] + randomData[1]) * learning_rate
-                self.bias = (self.bias + randomData[2]) * learning_rate
-                print('weight', self.weight)
-                print('bias', self.bias)
+            if randomData[2] * (self.weight[0] * randomData[0] + self.weight[1] * randomData[1] + self.bias) <= 0:
+                # print("------------",(self.weight[0] + randomData[0]) * learning_rate)
+                self.weight[0] = self.weight[0] + randomData[2] * randomData[0] * learning_rate
+                # print(self.weight[0])
+                self.weight[1] = self.weight[1] + randomData[2] * randomData[1] * learning_rate
+                self.bias = self.bias + randomData[2] * learning_rate
+                print("weight : ", self.weight)
+                print("bias : ", self.bias)
 
 
 if __name__ == "__main__":
@@ -59,4 +61,3 @@ if __name__ == "__main__":
     model = percePtron()
     model.train(data)
     model.draw(x1, x2, y1, y2)
-
