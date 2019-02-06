@@ -5,6 +5,8 @@ from model import LWRL
 from model import StereMultinomial
 # 数据可视化
 import matplotlib.pyplot as plt
+
+
 def load_data():
     path = "./data/temperature.txt"
     file = open(path)
@@ -30,8 +32,9 @@ def linear(X, y):
 
 def MultinomialModel(X, y):
     model = multinomialModel()
-    model.train(X, y,5000,1e-7,5)
+    model.train(X, y, 5000, 1e-7, 5)
     model.draw(X, y)
+
 
 def lwrl(X, y):
     model = LWRL()
@@ -41,10 +44,13 @@ def lwrl(X, y):
         preds.append(pred)
     model.draw(X, y, preds)
 
+
 def stereMultinomialModel(X, y):
     model = StereMultinomial()
     model.train(X, y, 500000, 20, 1e-5)
     model.draw(X, y)
+
+
 if __name__ == "__main__":
     int_data = load_data()
     print(int_data)
@@ -55,4 +61,4 @@ if __name__ == "__main__":
     x = np.arange(start=1, stop=len(int_data) + 1, step=1)
     # MultinomialModel(x, int_data)
     # lwrl(x,int_data)
-    stereMultinomialModel(x,int_data)
+    stereMultinomialModel(x, int_data)
