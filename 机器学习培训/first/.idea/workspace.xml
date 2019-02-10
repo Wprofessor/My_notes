@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7f417f1-411e-4b0b-8c55-2b85e0af7df6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../机器学习/Algorithms/NaïveBayes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../机器学习/Algorithms/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习/Algorithms/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../机器学习/Algorithms/NaïveBayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习/Algorithms/NaïveBayes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +284,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.110303834" />

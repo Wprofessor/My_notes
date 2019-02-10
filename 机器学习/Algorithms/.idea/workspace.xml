@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b2c944-a856-4e82-aa0f-e580a802a70e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/NaïveBayes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NaïveBayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/NaïveBayes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,14 +37,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4165" />
+          <entry key="py" value="4740" />
           <entry key="txt" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="43" />
-          <entry key="Python" value="4165" />
+          <entry key="Python" value="4740" />
         </counts>
       </usages-collector>
     </session>
@@ -110,15 +109,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+            <state relative-caret-position="-2010">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
-                <marker date="1549723698778" expanded="true" signature="54:59" ph="..." />
-                <marker date="1549723698778" expanded="true" signature="615:616" ph="..." />
-                <marker date="1549723698778" expanded="true" signature="615:620" ph="..." />
-                <marker date="1549723698778" expanded="true" signature="798:803" ph="..." />
-                <marker date="1549723698778" expanded="true" signature="1063:1064" ph="..." />
-                <marker date="1549723698778" expanded="true" signature="1063:1205" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="54:59" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="886:887" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="886:891" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="1069:1074" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="1334:1335" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="1334:1476" ph="..." />
+                <marker date="1549780104731" expanded="true" signature="2039:2237" ph="..." />
               </folding>
             </state>
           </provider>
@@ -171,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-160" />
     <option name="y" value="60" />
     <option name="width" value="2400" />
@@ -368,7 +368,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45815602" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20567375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -460,15 +460,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        <state relative-caret-position="-2010">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <marker date="1549723698778" expanded="true" signature="54:59" ph="..." />
-            <marker date="1549723698778" expanded="true" signature="615:616" ph="..." />
-            <marker date="1549723698778" expanded="true" signature="615:620" ph="..." />
-            <marker date="1549723698778" expanded="true" signature="798:803" ph="..." />
-            <marker date="1549723698778" expanded="true" signature="1063:1064" ph="..." />
-            <marker date="1549723698778" expanded="true" signature="1063:1205" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="54:59" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="886:887" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="886:891" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="1069:1074" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="1334:1335" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="1334:1476" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="2039:2237" ph="..." />
           </folding>
         </state>
       </provider>
