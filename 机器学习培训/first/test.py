@@ -1,21 +1,27 @@
 class Solution:
-    def maxArea(self, height):
+    def romanToInt(self, s):
         """
-        :type height: List[int]
+        :type s: str
         :rtype: int
         """
-        left = 0
-        right = len(height) - 1
-        vmax = min(height[left], height[right]) * (right - left)
-        while left < right:
-            vmax = max(vmax, min(height[left], height[right]) * (right - left))
-            if height[left] < height[right]:
-                left += 1
+        dit = {}
+        dit["I"] = 1
+        dit["V"] = 5
+        dit["X"] = 10
+        dit["L"] = 50
+        dit["C"] = 100
+        dit["D"] = 500
+        dit["M"] = 1000
+        m = 0
+        for i in range(len(s)):
+            if i < len(s) - 1 and s[i] < s[i + 1]:
+
+                m = m - dit[s[i]]
             else:
-                right -= 1
-        return vmax
+                m = m + dit[s[i]]
+        return abs(m)
 
 
 if __name__ == "__main__":
-    model = Solution()
-    print(model.maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))
+    mod = Solution()
+    print(mod.romanToInt("MCMXCIV"))

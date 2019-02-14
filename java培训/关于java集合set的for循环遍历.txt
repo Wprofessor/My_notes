@@ -1,0 +1,10 @@
+Set<Object> set = new HashSet<Object>();  
+for—≠ª∑±È¿˙£∫  
+for (Object obj: set) {  
+      if(obj instanceof Integer){  
+                int aa= (Integer)obj;  
+             }else if(obj instanceof String){  
+               String aa = (String)obj  
+             }  
+              ........  
+}  
