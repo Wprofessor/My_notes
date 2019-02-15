@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b2c944-a856-4e82-aa0f-e580a802a70e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ID3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,26 +26,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="10" />
+          <entry key="py" value="11" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="10" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4740" />
+          <entry key="py" value="6316" />
           <entry key="txt" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="43" />
-          <entry key="Python" value="4740" />
+          <entry key="Python" value="6316" />
         </counts>
       </usages-collector>
     </session>
@@ -66,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="60" column="26" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="26" />
+            <state relative-caret-position="308">
+              <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="87" />
               <folding>
                 <marker date="1549113371284" expanded="true" signature="60:170" ph="..." />
               </folding>
@@ -78,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KNN_S.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
+            <state relative-caret-position="476">
               <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding>
                 <marker date="1549522767464" expanded="true" signature="2162:2167" ph="..." />
@@ -106,7 +107,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
@@ -119,6 +120,24 @@
                 <marker date="1549780104731" expanded="true" signature="1334:1335" ph="..." />
                 <marker date="1549780104731" expanded="true" signature="1334:1476" ph="..." />
                 <marker date="1549780104731" expanded="true" signature="2039:2237" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ID3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="89" column="37" lean-forward="true" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
+              <folding>
+                <marker date="1550240030048" expanded="true" signature="42:47" ph="..." />
+                <marker date="1550240030048" expanded="true" signature="298:299" ph="..." />
+                <marker date="1550240030048" expanded="true" signature="298:303" ph="..." />
+                <marker date="1550240030048" expanded="true" signature="757:762" ph="..." />
+                <marker date="1550240030048" expanded="true" signature="1204:2378" ph="..." />
+                <marker date="1550240030048" expanded="true" signature="1958:2378" ph="..." />
+                <marker date="1550240030048" expanded="true" signature="2218:2378" ph="..." />
               </folding>
             </state>
           </provider>
@@ -168,10 +187,11 @@
         <option value="$PROJECT_DIR$/KNN_HandWriting.py" />
         <option value="$PROJECT_DIR$/KNN_S.py" />
         <option value="$PROJECT_DIR$/NaïveBayes.py" />
+        <option value="$PROJECT_DIR$/ID3.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-160" />
     <option name="y" value="60" />
     <option name="width" value="2400" />
@@ -223,7 +243,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.NaïveBayes">
+  <component name="RunManager" selected="Python.ID3">
+    <configuration name="ID3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Algorithms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ID3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="KNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -287,27 +328,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Perceptron" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algorithms" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Perceptron.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,19 +350,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Perceptron" />
       <item itemvalue="Python.KNN" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.KNN_S" />
       <item itemvalue="Python.NaïveBayes" />
+      <item itemvalue="Python.ID3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ID3" />
         <item itemvalue="Python.NaïveBayes" />
         <item itemvalue="Python.KNN" />
         <item itemvalue="Python.KNN_S" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.Perceptron" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +380,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14464994" />
@@ -406,16 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="60" column="26" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="26" />
-          <folding>
-            <marker date="1549113371284" expanded="true" signature="60:170" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -426,9 +436,32 @@
     <entry file="file://$PROJECT_DIR$/KNN_HandWriting.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/knn_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="68" column="16" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+          <folding>
+            <marker date="1549780104731" expanded="true" signature="54:59" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="886:887" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="886:891" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="1069:1074" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="1334:1335" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="1334:1476" ph="..." />
+            <marker date="1549780104731" expanded="true" signature="2039:2237" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/KNN_S.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
+        <state relative-caret-position="476">
           <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding>
             <marker date="1549522767464" expanded="true" signature="2162:2167" ph="..." />
@@ -451,25 +484,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/knn_data.txt">
+    <entry file="file://$PROJECT_DIR$/KNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="308">
+          <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="87" />
+          <folding>
+            <marker date="1549113371284" expanded="true" signature="60:170" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
+    <entry file="file://$PROJECT_DIR$/ID3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="68" column="16" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+        <state relative-caret-position="342">
+          <caret line="89" column="37" lean-forward="true" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
           <folding>
-            <marker date="1549780104731" expanded="true" signature="54:59" ph="..." />
-            <marker date="1549780104731" expanded="true" signature="886:887" ph="..." />
-            <marker date="1549780104731" expanded="true" signature="886:891" ph="..." />
-            <marker date="1549780104731" expanded="true" signature="1069:1074" ph="..." />
-            <marker date="1549780104731" expanded="true" signature="1334:1335" ph="..." />
-            <marker date="1549780104731" expanded="true" signature="1334:1476" ph="..." />
-            <marker date="1549780104731" expanded="true" signature="2039:2237" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="42:47" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="298:299" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="298:303" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="757:762" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="1204:2378" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="1958:2378" ph="..." />
+            <marker date="1550240030048" expanded="true" signature="2218:2378" ph="..." />
           </folding>
         </state>
       </provider>
