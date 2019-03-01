@@ -5,956 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b2c944-a856-4e82-aa0f-e580a802a70e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/0_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/1_96.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/2_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/3_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_101.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_102.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_103.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_104.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_106.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_107.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_108.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_109.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_110.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_111.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_112.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_113.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_96.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_97.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_98.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/4_99.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_101.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_102.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_103.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_104.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_106.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_107.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_96.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_97.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_98.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/5_99.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/6_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/7_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/8_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/handtestDigits/9_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/testtest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KNN_HandWriting.py" beforeDir="false" afterPath="$PROJECT_DIR$/KNN_HandWriting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -969,20 +20,21 @@
         <counts>
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="18" />
-          <entry key="txt" value="70" />
+          <entry key="py" value="22" />
+          <entry key="txt" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="70" />
-          <entry key="Python" value="18" />
+          <entry key="PLAIN_TEXT" value="71" />
+          <entry key="Python" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -1004,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            <state relative-caret-position="560">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -1016,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KNN_HandWriting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+            <state relative-caret-position="263">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <marker date="1551095889407" expanded="true" signature="1970:1975" ph="..." />
@@ -1028,10 +80,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Perceptron.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ID3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KNN.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KNN_S.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-336">
-              <caret line="111" column="57" lean-forward="true" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="57" />
+            <state relative-caret-position="3108">
+              <caret line="111" column="57" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="57" />
               <folding>
                 <marker date="1549522767464" expanded="true" signature="2162:2167" ph="..." />
                 <marker date="1549522767464" expanded="true" signature="2863:2864" ph="..." />
@@ -1264,10 +353,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17965654" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22324967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1290,18 +379,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/8_75.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/8_81.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/8_95.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/8_112.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/handDigits/9_202.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1373,9 +450,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/handDigits/0_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/0_2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/handDigits/0_6.txt">
@@ -1476,8 +550,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="560">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -1486,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KNN_S.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="111" column="57" lean-forward="true" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="57" />
+        <state relative-caret-position="3108">
+          <caret line="111" column="57" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="57" />
           <folding>
             <marker date="1549522767464" expanded="true" signature="2162:2167" ph="..." />
             <marker date="1549522767464" expanded="true" signature="2863:2864" ph="..." />
@@ -1499,10 +573,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ID3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/handDigits/0_2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/KNN_HandWriting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+        <state relative-caret-position="263">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <marker date="1551095889407" expanded="true" signature="1970:1975" ph="..." />
