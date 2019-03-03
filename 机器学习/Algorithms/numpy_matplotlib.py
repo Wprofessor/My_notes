@@ -57,7 +57,7 @@ import pandas as pd  # 基于两种数据类型series 和 dataframe
 # print(a.cumsum())  # >>>[ 0  1  3  6 10 15 21 28 36 45]
 
 # matplotlib
-#折线图（plot）
+# 折线图（plot）
 
 # 简单的绘图
 x = np.linspace(0, 2 * np.pi, 50)  # 生成一个包含 50 个元素的数组，这 50 个元素均匀的分布在 [0, 2pi] 的区间上
@@ -76,31 +76,31 @@ plt.plot(x, np.sin(x), 'r-o',
 plt.show()
 
 # 使用子图
-#subplot() 函数，该函数的第一个参数代表子图的总行数，
+# subplot() 函数，该函数的第一个参数代表子图的总行数，
 # 第二个参数代表子图的总列数，第三个参数代表活跃区域。
-#活跃区域代表当前子图所在绘图区域，绘图区域是按从左至右，从上至下的顺序编号。
+# 活跃区域代表当前子图所在绘图区域，绘图区域是按从左至右，从上至下的顺序编号。
 # 例如在 4×4 的方格上，活跃区域 6 在方格上的坐标为 (2, 2)。
 x = np.linspace(0, 2 * np.pi, 50)
-plt.subplot(2, 1, 1) # （行，列，活跃区）
+plt.subplot(2, 1, 1)  # （行，列，活跃区）
 plt.plot(x, np.sin(x), 'r')
 plt.subplot(2, 1, 2)
 plt.plot(x, np.cos(x), 'g')
 plt.show()
 
-#折线图（scatter）
+# 折线图（scatter）
 
 # 简单的散点图
 x = np.linspace(0, 2 * np.pi, 50)
 y = np.sin(x)
-plt.scatter(x,y)
+plt.scatter(x, y)
 plt.show()
 
 # 添加标题，坐标轴标记和图例
 x = np.linspace(0, 2 * np.pi, 50)
 plt.plot(x, np.sin(x), 'r-x', label='Sin(x)')
 plt.plot(x, np.cos(x), 'g-^', label='Cos(x)')
-plt.legend() # 展示图例
-plt.xlabel('Rads') # 给 x 轴添加标签
-plt.ylabel('Amplitude') # 给 y 轴添加标签
-plt.title('Sin and Cos Waves') # 添加图形标题
+plt.legend()  # 展示图例
+plt.xlabel('Rads')  # 给 x 轴添加标签
+plt.ylabel('Amplitude')  # 给 y 轴添加标签
+plt.title('Sin and Cos Waves')  # 添加图形标题
 plt.show()
