@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b2c944-a856-4e82-aa0f-e580a802a70e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/SvmtestSet.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svmSimplify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svmSimplify.py" beforeDir="false" afterPath="$PROJECT_DIR$/svmSimplify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,14 +39,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="9071" />
+          <entry key="py" value="9262" />
           <entry key="txt" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="47" />
-          <entry key="Python" value="9071" />
+          <entry key="Python" value="9262" />
         </counts>
       </usages-collector>
     </session>
@@ -71,11 +68,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svmSimplify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="492">
+              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
               <folding>
-                <marker date="1551788595810" expanded="true" signature="49:54" ph="..." />
-                <marker date="1551788595810" expanded="true" signature="439:520" ph="..." />
+                <marker date="1551878460514" expanded="true" signature="49:54" ph="..." />
+                <marker date="1551878460514" expanded="true" signature="572:573" ph="..." />
+                <marker date="1551878460514" expanded="true" signature="572:577" ph="..." />
+                <marker date="1551878460514" expanded="true" signature="712:717" ph="..." />
               </folding>
             </state>
           </provider>
@@ -622,11 +621,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svmSimplify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="492">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding>
-            <marker date="1551788595810" expanded="true" signature="49:54" ph="..." />
-            <marker date="1551788595810" expanded="true" signature="439:520" ph="..." />
+            <marker date="1551878460514" expanded="true" signature="49:54" ph="..." />
+            <marker date="1551878460514" expanded="true" signature="572:573" ph="..." />
+            <marker date="1551878460514" expanded="true" signature="572:577" ph="..." />
+            <marker date="1551878460514" expanded="true" signature="712:717" ph="..." />
           </folding>
         </state>
       </provider>

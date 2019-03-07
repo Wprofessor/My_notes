@@ -24,3 +24,17 @@ def selectA(i, m):
         j = int(random.uniform(0, m))
     return j
 
+
+# 用于调整alpha的值
+# L:下限,H:上限
+def judgeAlpha(aj, H, L):
+    if aj > H:
+        aj = H
+    if aj < L:
+        aj = L
+    return aj
+
+
+# 简化版smo优化算法
+def smoSimple(dataSet, Labels, C, toler, maxIter):
+    
