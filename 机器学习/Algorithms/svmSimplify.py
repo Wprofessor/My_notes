@@ -1,5 +1,6 @@
 # 加载数据
 import random
+import numpy as np
 
 
 def loadDataSet(fileName):
@@ -37,4 +38,18 @@ def judgeAlpha(aj, H, L):
 
 # 简化版smo优化算法
 def smoSimple(dataSet, Labels, C, toler, maxIter):
-    
+    # mat意思为转换为矩阵
+    dataSet = np.mat(np.array(dataSet))
+    # transpose意思为矩阵的转置
+    Labels = np.mat(np.array(Labels)).transpose()
+    b = 0
+    m, n = np.shape(dataSet)
+    # 初始化alpha
+    alpha = np.mat(np.zeros((m, 1)))
+    # 记录alpha不改变时遍历的次数
+    iter = 0
+    while iter < maxIter:
+        # 记录alpha是否被优化
+        alphaChanged = 0
+        for i in range(m):
+           
