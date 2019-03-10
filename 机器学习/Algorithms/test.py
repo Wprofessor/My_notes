@@ -41,9 +41,12 @@ def show(dataSet, Labels):
             data_minus.append(dataSet[i])
     data_plus_np = np.array(data_plus)
     data_minus_np = np.array(data_minus)
-    plt.scatter(np.transpose(data_plus_np)[0], np.transpose(data_plus_np)[1])
-    plt.scatter(np.transpose(data_minus_np)[0], np.transpose(data_minus_np)[1])
-    plt.show()
+    # plt.scatter(np.transpose(data_plus_np)[0], np.transpose(data_plus_np)[1])
+    # plt.scatter(np.transpose(data_minus_np)[0], np.transpose(data_minus_np)[1])
+    # plt.show()
+    t = [[0, 1], [1, 1], [1, 1], [1, 1], [0, 1]]
+    te = np.nonzero(np.mat(np.array(t)[:, 0]).A)[0]
+    print(te)
     # print(data_plus_np)
     # print(data_minus_np.transpose())
 
