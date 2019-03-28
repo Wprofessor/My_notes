@@ -1,4 +1,5 @@
-file = open("./Data/ex0.txt")
-# 文件中行的长度
-print(len(file.readline().split()))
-print(file.readline().split()[1])
+import numpy as np
+
+a = np.mat(np.eye(3,3))
+print(a)
+print(a[1,1])
