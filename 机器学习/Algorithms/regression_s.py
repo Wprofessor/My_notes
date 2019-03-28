@@ -39,7 +39,7 @@ def lwlr(testpoint, dataSet, Labels, k):
 
 
 # 得到所有的预测值
-def lwlrTest(textArr, xArr, yArr, k=1.0):
+def lwlrTest(textArr, xArr, yArr, k=0.01):
     m = np.shape(textArr)[0]
     yHat = np.zeros(m)
     for i in range(m):
@@ -53,7 +53,7 @@ def draw():
     # 由于得到的结果是曲线，因此要对x轴进行排序
     xIndex = np.array([x[1] for x in dataSet]).argsort()  # 返回x排序后的下标
     xSort = np.array([x[1] for x in dataSet])[xIndex]
-    ySort = lwlrTest(dataSet, dataSet, Labels, 0.01)[xIndex]
+    ySort = lwlrTest(dataSet, dataSet, Labels,0.01)[xIndex]
     plt.plot(xSort, ySort, 'r')
     plt.show()
 
