@@ -53,7 +53,7 @@ def draw():
     # 由于得到的结果是曲线，因此要对x轴进行排序
     xIndex = np.array([x[1] for x in dataSet]).argsort()  # 返回x排序后的下标
     xSort = np.array([x[1] for x in dataSet])[xIndex]
-    ySort = lwlrTest(dataSet, dataSet, Labels,0.01)[xIndex]
+    ySort = lwlrTest(dataSet, dataSet, Labels, 0.01)[xIndex]
     plt.plot(xSort, ySort, 'r')
     plt.show()
 
