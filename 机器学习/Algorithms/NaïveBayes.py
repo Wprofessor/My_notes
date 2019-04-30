@@ -4,12 +4,6 @@ import numpy as np
 
 # 数据样本
 def loadDataSet():
-    # dataset = [['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'],
-    #     #            ['maybe', 'not', 'take', 'him', 'to', 'dog', 'park', 'stupid'],
-    #     #            ['my', 'dalmation', 'is', 'so', 'cute', 'I', 'love', 'hime'],
-    #     #            ['stop', 'posting', 'stupid', 'worthless', 'garbage'],
-    #     #            ['mr', 'licks', 'ate', 'my', 'steak', 'how', 'to', 'stop', 'him'],
-    #     #            ['quit', 'buying', 'worthless', 'dog', 'food', 'stupid']]
     dataset = [['玩', '游', '戏', '吧'],
                ['玩', 'lol', '吧'],
                ['我', '要', '学', '习'],

@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b2c944-a856-4e82-aa0f-e580a802a70e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../testClassify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../testClassify/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mathmodelD/NBayes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mathmodelD/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NaïveBayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/NaïveBayes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../机器学习培训/first/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,35 +25,36 @@
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ipynb" value="1" />
-          <entry key="py" value="57" />
-          <entry key="txt" value="80" />
+          <entry key="ipynb" value="2" />
+          <entry key="lastfailed" value="1" />
+          <entry key="py" value="60" />
+          <entry key="txt" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IPNB" value="1" />
-          <entry key="PLAIN_TEXT" value="80" />
-          <entry key="Python" value="57" />
+          <entry key="IPNB" value="2" />
+          <entry key="PLAIN_TEXT" value="82" />
+          <entry key="Python" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="py" value="17956" />
+          <entry key="py" value="19034" />
           <entry key="txt" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="17956" />
+          <entry key="Python" value="19034" />
         </counts>
       </usages-collector>
     </session>
@@ -59,117 +64,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="263">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/ex0.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regression.py">
+        <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-475">
-              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-              <folding>
-                <element signature="e#14#32#0" expanded="true" />
-                <marker date="1553672446423" expanded="true" signature="93:98" ph="..." />
-                <marker date="1553672446423" expanded="true" signature="403:885" ph="..." />
-                <marker date="1553672446423" expanded="true" signature="655:885" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regression_s.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1047">
-              <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-              <folding>
-                <element signature="e#11#29#0" expanded="true" />
-                <marker date="1553776577174" expanded="true" signature="424:425" ph="..." />
-                <marker date="1553776577174" expanded="true" signature="424:429" ph="..." />
-                <marker date="1553776577174" expanded="true" signature="1091:1092" ph="..." />
-                <marker date="1553776577174" expanded="true" signature="1091:1095" ph="..." />
-                <marker date="1553776577174" expanded="true" signature="1091:1096" ph="..." />
-                <marker date="1553776577174" expanded="true" signature="1230:1607" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Perceptron.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logRegres.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1554298682044" expanded="true" signature="71:76" ph="..." />
-                <marker date="1554298682044" expanded="true" signature="413:418" ph="..." />
-                <marker date="1554298682044" expanded="true" signature="490:495" ph="..." />
-                <marker date="1554298682044" expanded="true" signature="1190:1191" ph="..." />
-                <marker date="1554298682044" expanded="true" signature="1241:1902" ph="..." />
-                <marker date="1554298682044" expanded="true" signature="1241:1936" ph="..." />
-              </folding>
+            <state relative-caret-position="1372">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
+        <entry file="file://$PROJECT_DIR$/mathmodelD/NBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoordinateAscent.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1204">
-              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="3726">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
               <folding>
-                <element signature="e#9#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/logRegresTestSet.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-448">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numpy_matplotlib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1556623895712" expanded="true" signature="2671:2672" ph="..." />
               </folding>
             </state>
           </provider>
@@ -180,8 +96,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -200,7 +116,6 @@
         <option value="$PROJECT_DIR$/KNN.py" />
         <option value="$PROJECT_DIR$/Data/knn_data.txt" />
         <option value="$PROJECT_DIR$/KNN_S.py" />
-        <option value="$PROJECT_DIR$/NaïveBayes.py" />
         <option value="$PROJECT_DIR$/ID3.py" />
         <option value="$PROJECT_DIR$/Data/handDigits/2_171.txt" />
         <option value="$PROJECT_DIR$/KNN_HandWriting.py" />
@@ -216,16 +131,19 @@
         <option value="$PROJECT_DIR$/regression_s.py" />
         <option value="$PROJECT_DIR$/first.ipynb" />
         <option value="$PROJECT_DIR$/MLR.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/logRegres.py" />
+        <option value="$PROJECT_DIR$/NaïveBayes.py" />
+        <option value="$PROJECT_DIR$/mathmodelD/Test.ipynb" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/mathmodelD/NBayes.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -245,6 +163,11 @@
               <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="mathmodelD" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -257,10 +180,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\王教授\Documents\My notes\机器学习\Algorithms\mathmodelD" />
       <recent name="C:\Users\王教授\Documents\My notes\机器学习\Algorithms\Data" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\王教授\Documents\My notes\机器学习\Algorithms\Data" />
     </key>
   </component>
@@ -276,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.logRegres">
+  <component name="RunManager" selected="Python tests.pytest in NBayes.py">
     <configuration name="code" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -319,48 +243,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="regression" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algorithms" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regression.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="regression_s" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algorithms" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regression_s.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -382,20 +264,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for NBayes.testingNB" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mathmodelD" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;NBayes.testingNB&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in NBayes.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mathmodelD" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/mathmodelD/NBayes.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.regression" />
-      <item itemvalue="Python.regression_s" />
       <item itemvalue="Python.code" />
       <item itemvalue="Python.logRegres" />
+      <item itemvalue="Python tests.pytest for NBayes.testingNB" />
+      <item itemvalue="Python tests.pytest in NBayes.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.logRegres" />
+        <item itemvalue="Python tests.pytest in NBayes.py" />
+        <item itemvalue="Python tests.pytest for NBayes.testingNB" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.logRegres" />
         <item itemvalue="Python.code" />
-        <item itemvalue="Python.regression_s" />
-        <item itemvalue="Python.regression" />
       </list>
     </recent_temporary>
   </component>
@@ -412,16 +324,48 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_NBayes_py - 2019.04.29 at 22h 12m 11s.xml">
+      <configuration name="pytest in NBayes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_NBayes_py - 2019.04.30 at 19h 01m 25s.xml">
+      <configuration name="pytest in NBayes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 02m 58s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 03m 11s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 03m 18s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 21m 15s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 22m 14s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 29m 57s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 31m 10s.xml">
+      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_NBayes_py - 2019.04.30 at 19h 31m 36s.xml">
+      <configuration name="pytest in NBayes.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2007926" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1601686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993395" visible="true" weight="0.16595745" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993395" visible="true" weight="0.39630836" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -439,22 +383,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/0_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/0_6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/0_18.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/9_203.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/handDigits/9_189.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -589,17 +517,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/first.ipynb" />
-    <entry file="file://$PROJECT_DIR$/KNN_HandWriting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1431">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MLR.py" />
-    <entry file="file://$PROJECT_DIR$/Data/ex0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/KNN.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -621,16 +539,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/logRegresTestSet.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-448">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/numpy_matplotlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
+        <state relative-caret-position="27">
           <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -638,10 +549,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/logRegresTestSet.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CoordinateAscent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1204">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state relative-caret-position="27">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding>
             <element signature="e#9#27#0" expanded="true" />
           </folding>
@@ -651,52 +569,16 @@
     <entry file="file://$PROJECT_DIR$/Perceptron.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logRegres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1554298682044" expanded="true" signature="71:76" ph="..." />
-            <marker date="1554298682044" expanded="true" signature="413:418" ph="..." />
-            <marker date="1554298682044" expanded="true" signature="490:495" ph="..." />
-            <marker date="1554298682044" expanded="true" signature="1190:1191" ph="..." />
-            <marker date="1554298682044" expanded="true" signature="1241:1902" ph="..." />
-            <marker date="1554298682044" expanded="true" signature="1241:1936" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/regression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <element signature="e#14#32#0" expanded="true" />
-            <marker date="1553672446423" expanded="true" signature="93:98" ph="..." />
-            <marker date="1553672446423" expanded="true" signature="403:885" ph="..." />
-            <marker date="1553672446423" expanded="true" signature="655:885" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/regression_s.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1047">
+        <state relative-caret-position="817">
           <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
           <folding>
             <element signature="e#11#29#0" expanded="true" />
@@ -710,10 +592,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+            <marker date="1553672446423" expanded="true" signature="93:98" ph="..." />
+            <marker date="1553672446423" expanded="true" signature="403:885" ph="..." />
+            <marker date="1553672446423" expanded="true" signature="655:885" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/ex0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN_HandWriting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logRegres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1554298682044" expanded="true" signature="71:76" ph="..." />
+            <marker date="1554298682044" expanded="true" signature="413:418" ph="..." />
+            <marker date="1554298682044" expanded="true" signature="490:495" ph="..." />
+            <marker date="1554298682044" expanded="true" signature="1190:1191" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        <state relative-caret-position="1372">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/.cache/v/cache/lastfailed">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/Test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/NBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3726">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <marker date="1556623895712" expanded="true" signature="2671:2672" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
