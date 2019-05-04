@@ -21,7 +21,7 @@ def loadDataSet():
     #     temp = line.split(',')
     #     dataset.append(temp)
     # label = [1, 2, 3, 4, 5, 6]
-    fr = open('C:\\Users\\王教授\\Desktop\\test2.txt')
+    fr = open('C:\\Users\\王教授\\Desktop\\校赛D题\\test2.txt')
     dataset = []
     label = []
     for line in fr.readlines():

@@ -40,7 +40,6 @@ def Euldist(listnewVocaset, label):
     kindListnewVocaset = []
     for listvocaset in kindData:
         kindListnewVocaset.append(setword(vocaset, listvocaset))
-
     listnewVocaset = np.array(listnewVocaset)
     kindListnewVocaset = np.array(kindListnewVocaset)
     distMat = []
@@ -53,9 +52,36 @@ def Euldist(listnewVocaset, label):
     return distMat
 
 
+def cosSimilarity(listnewVocaset, label):
+    fr = open('C:\\Users\\王教授\\Desktop\\aaa.txt')
+    kinds = []
+    kindData = []
+    for line in fr.readlines():
+        line = line.strip().split()
+        kindData.append(line[1:])
+        kinds.append(line[0])
+    kindListnewVocaset = []
+    for listvocaset in kindData:
+        kindListnewVocaset.append(setword(vocaset, listvocaset))
+    listnewVocaset = np.array(listnewVocaset)
+    kindListnewVocaset = np.array(kindListnewVocaset)
+    distMat = []
+    for i in range(len(label)):
+        temp = []
+        for j in range(len(kinds)):
+            formatM = np.sum(listnewVocaset[j] * kindListnewVocaset[i])
+            formatZ = (np.sum(listnewVocaset[j] ** 2) ** 0.5) * (np.sum(kindListnewVocaset[i] ** 2) ** 0.5)
+            temp .append(formatM / formatZ)
+        distMat.append(temp)
+    return distMat
+
+
 dataset, label = loadDataSet()
 vocaset = createVocabList(dataset)
 listnewVocaset = []
 for listvocaset in dataset:
     listnewVocaset.append(setword(vocaset, listvocaset))
+print('欧式距离：')
 print(np.mat(Euldist(listnewVocaset, label)))
+print('cos相似度：')
+print(np.mat(cosSimilarity(listnewVocaset, label)))
