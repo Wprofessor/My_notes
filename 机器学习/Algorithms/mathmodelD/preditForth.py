@@ -15,7 +15,7 @@ def loadDataSet():
     fr = pd.read_excel('C:\\Users\\王教授\\Desktop\\校赛D题\\ha.xlsx')
     fr_ = pd.read_excel('C:\\Users\\王教授\\Desktop\\第四问.xlsx')
     data = []
-    for i in range(38, 43):
+    for i in range(53, 58):
         data.append(
             [fr.iloc[i]['电视台即将收益'], fr.iloc[i]['电视广告上一季度收视率（%）'], fr.iloc[i]['制造商上一季度产品销售量'], fr.iloc[i]['是否投放']])
     dataMat = []
@@ -26,7 +26,7 @@ def loadDataSet():
             LabelMat.append(1)
         else:
             LabelMat.append(0)
-    for k in range(50, 58):
+    for k in range(184, 207):
         dataMat.append([fr_.iloc[k]['电视台即将收益'], fr_.iloc[k]['电视广告上一季度收视率（%）'], fr_.iloc[k]['制造商上一季度产品销售量']])
     # 数据归一化处理
     dataMat = np.array(dataMat)

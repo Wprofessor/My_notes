@@ -114,11 +114,13 @@ def classiyyNB(Inputdata, p1, p2, p3, p4, p5, p6, pInsult):
 
 
 def testingNB():
+    variety = ['实地示范', '满意顾客证词', '生活风格', '动画', '以视觉效果为主', '幽默']
     dataset, label = loadDataSet()
     voast = createVocabList(dataset)
     # 去掉多余的空格
     for i in range(len(voast)):
         voast[i] = str(voast[i]).strip()
+    print(voast)
     listnewVocaset = []
     for listvocaset in dataset:
         listnewVocaset.append(setword(voast, listvocaset))
@@ -133,6 +135,7 @@ def testingNB():
     Inputdata = np.array(Inputdata)
     for i in range(len(kinds)):
         temp = setword(voast, Inputdata[i])
-        print('”', kinds[i], "”对应的分类是：",classiyyNB(temp, p1, p2, p3, p4, p5, p6, pInsult))
+        print(kinds[i], " ", variety[classiyyNB(temp, p1, p2, p3, p4, p5, p6, pInsult) - 1])
+
 
 testingNB()

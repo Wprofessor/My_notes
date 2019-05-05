@@ -47,7 +47,7 @@ def loadDataSet():
         labels2.append(temp2)
     for i in range(6):
         dataSet.append([1, i])
-    return dataSet, labels2[0]
+    return dataSet, labels2[3]
 
 
 def standRegres(xArr, yArr):
@@ -67,9 +67,14 @@ def predit(w, input):
 
 
 def draw():
+    plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+    plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
     dataSet, Labels = loadDataSet()
     plt.scatter([x[1] for x in dataSet], Labels)
     plt.plot([x[1] for x in dataSet], (np.mat(dataSet) * standRegres(dataSet, Labels)).T.tolist()[0])  # 矩阵转列表
+    plt.xlabel('月份')  # 给 x 轴添加标签
+    plt.ylabel('底价')  # 给 y 轴添加标签
+    plt.title('18：57-20：25')
     plt.show()
 
 

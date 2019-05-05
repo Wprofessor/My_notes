@@ -2,7 +2,7 @@ import numpy as  np
 
 
 def loadDataSet():
-    fr = open('C:\\Users\\王教授\\Desktop\\test3.txt')
+    fr = open('C:\\Users\\王教授\\Desktop\\校赛D题\\test3.txt')
     dataset = []
     label = []
     for line in fr.readlines():
@@ -42,6 +42,7 @@ def Euldist(listnewVocaset, label):
         kindListnewVocaset.append(setword(vocaset, listvocaset))
     listnewVocaset = np.array(listnewVocaset)
     kindListnewVocaset = np.array(kindListnewVocaset)
+    print(kindListnewVocaset)
     distMat = []
     for i in range(len(label)):
         temp = []
