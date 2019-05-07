@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/mathmodelD/NBayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathmodelD/NBayes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mathmodelD/preditForth.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathmodelD/preditForth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mathmodelD/preditValue.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathmodelD/preditValue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mathmodelD/similerity.py" beforeDir="false" afterPath="$PROJECT_DIR$/mathmodelD/similerity.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +31,7 @@
         <counts>
           <entry key="ipynb" value="2" />
           <entry key="lastfailed" value="1" />
-          <entry key="py" value="76" />
+          <entry key="py" value="77" />
           <entry key="txt" value="83" />
         </counts>
       </usages-collector>
@@ -40,20 +39,20 @@
         <counts>
           <entry key="IPNB" value="2" />
           <entry key="PLAIN_TEXT" value="84" />
-          <entry key="Python" value="76" />
+          <entry key="Python" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="py" value="23524" />
+          <entry key="py" value="23534" />
           <entry key="txt" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="23524" />
+          <entry key="Python" value="23534" />
         </counts>
       </usages-collector>
     </session>
@@ -75,19 +74,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tensorflow/tensorflowTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="621">
+              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tensorflow/tensorflowBPNN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mathmodelD/NBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="111" column="29" lean-forward="true" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+            <state relative-caret-position="189">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding>
-                <marker date="1557061889297" expanded="true" signature="2677:2678" ph="..." />
+                <marker date="1557218175030" expanded="true" signature="2167:2168" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mathmodelD/similerity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+            <state relative-caret-position="270">
+              <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
               <folding>
                 <marker date="1556978049687" expanded="true" signature="766:2369" ph="..." />
                 <marker date="1556978049687" expanded="true" signature="1551:2369" ph="..." />
@@ -106,14 +117,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mathmodelD/preditValue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="76" column="28" lean-forward="true" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+            <state relative-caret-position="-216">
+              <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
               <folding>
                 <element signature="e#14#32#0" expanded="true" />
-                <marker date="1557057526127" expanded="true" signature="1717:1741" ph="..." />
+                <marker date="1557222164755" expanded="true" signature="968:992" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mathmodelD/preditForth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="135">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -192,10 +203,10 @@
         <option value="$PROJECT_DIR$/tensorflow/tensorflowTest.py" />
         <option value="$PROJECT_DIR$/tensorflow/tensorflowBPNN.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/mathmodelD/preditForth.py" />
         <option value="$PROJECT_DIR$/mathmodelD/similerity.py" />
-        <option value="$PROJECT_DIR$/mathmodelD/preditValue.py" />
+        <option value="$PROJECT_DIR$/mathmodelD/preditForth.py" />
         <option value="$PROJECT_DIR$/mathmodelD/NBayes.py" />
+        <option value="$PROJECT_DIR$/mathmodelD/preditValue.py" />
       </list>
     </option>
   </component>
@@ -266,7 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for NBayes.testingNB">
+  <component name="RunManager" selected="Python tests.pytest in NBayes.py">
     <configuration name="preditForth" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -369,11 +380,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in NBayes.py" />
+        <item itemvalue="Python.preditForth" />
         <item itemvalue="Python tests.pytest for NBayes.testingNB" />
         <item itemvalue="Python.preditValue" />
         <item itemvalue="Python.similerity" />
-        <item itemvalue="Python.preditForth" />
-        <item itemvalue="Python tests.pytest in NBayes.py" />
       </list>
     </recent_temporary>
   </component>
@@ -391,12 +402,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 29m 57s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.04.30 at 19h 31m 10s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_NBayes_py - 2019.04.30 at 19h 31m 36s.xml">
       <configuration name="pytest in NBayes.py" configurationId="tests" />
     </history-entry>
@@ -421,9 +426,15 @@
     <history-entry file="pytest_for_NBayes_testingNB - 2019.05.05 at 21h 11m 30s.xml">
       <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_NBayes_py - 2019.05.06 at 16h 40m 07s.xml">
+      <configuration name="pytest in NBayes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_NBayes_py - 2019.05.07 at 16h 36m 18s.xml">
+      <configuration name="pytest in NBayes.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1601686" />
@@ -624,16 +635,6 @@
     <entry file="file://$PROJECT_DIR$/tensorflow/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow/tensorflowBPNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bpnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -667,13 +668,6 @@
             <marker date="1553672446423" expanded="true" signature="403:885" ph="..." />
             <marker date="1553672446423" expanded="true" signature="655:885" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow/tensorflowTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -718,27 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mathmodelD/similerity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <marker date="1556978049687" expanded="true" signature="766:2369" ph="..." />
-            <marker date="1556978049687" expanded="true" signature="1551:2369" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mathmodelD/preditForth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/numpy_matplotlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -749,23 +722,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mathmodelD/preditValue.py">
+    <entry file="file://$PROJECT_DIR$/tensorflow/tensorflowTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="76" column="28" lean-forward="true" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+        <state relative-caret-position="621">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorflow/tensorflowBPNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
-            <element signature="e#14#32#0" expanded="true" />
-            <marker date="1557057526127" expanded="true" signature="1717:1741" ph="..." />
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/similerity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+          <folding>
+            <marker date="1556978049687" expanded="true" signature="766:2369" ph="..." />
+            <marker date="1556978049687" expanded="true" signature="1551:2369" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/preditForth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mathmodelD/NBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="111" column="29" lean-forward="true" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+        <state relative-caret-position="189">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
-            <marker date="1557061889297" expanded="true" signature="2677:2678" ph="..." />
+            <marker date="1557218175030" expanded="true" signature="2167:2168" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mathmodelD/preditValue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+            <marker date="1557222164755" expanded="true" signature="968:992" ph="..." />
           </folding>
         </state>
       </provider>

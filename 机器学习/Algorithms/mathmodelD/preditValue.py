@@ -5,29 +5,6 @@ import matplotlib.pyplot as plt
 
 
 def loadDataSet():
-    # dataSet = []
-    # Labels = []
-    # for line in open(filename).readlines():
-    #     dataSet.append([float(line.split()[0]), float(line.split()[1])])
-    #     Labels.append(float(line.split()[-1]))
-
-    # fr = pd.read_excel('C:\\Users\\王教授\\Desktop\\deal.xlsx')
-    # dataSet = []
-    # labels1 = []
-    # labels2 = []
-    # # fr.loc[x][y]:x表示列索引，y表示行索引
-    # # fr.loc[x]  :读取x这一列
-    # # 同理 fr.iloc[][] :按行读取
-    # for i in range(12):
-    #     for j in range(9):
-    #         if i % 2 == 0:
-    #             labels1.append(float(fr.iloc[i][j]))
-    #         else:
-    #             labels2.append(float(fr.iloc[i][j]))
-    # for i in range(6):
-    #     for j in range(9):
-    #         dataSet.append([float(1), float(i), float(j)])
-
     fr = pd.read_excel('C:\\Users\\王教授\\Desktop\\校赛D题\\deal.xlsx')
     dataSet = []
     labels1 = []

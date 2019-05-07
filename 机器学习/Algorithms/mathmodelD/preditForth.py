@@ -104,10 +104,7 @@ def draw(weights):
 dataMat, LabelMat, data, inputData = loadDataSet()
 w = gradAscent(dataMat, LabelMat)
 print(w)
-print(LabelMat)
-print(inputData)
 result = np.mat(inputData) * np.mat(w)
-print(result)
 for i in result:
     if signed(i) > 0.5:
         print(1)

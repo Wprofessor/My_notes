@@ -4,23 +4,6 @@ import numpy as np
 
 # 数据样本
 def loadDataSet():
-    # fr = open('C:\\Users\\王教授\\Desktop\\test.txt')
-    # dataset = []
-    #
-    # for line in fr.readlines():
-    #     line = line.strip()
-    #     temp = []
-    #     for i in range(len(str(line))):
-    #         temp.append(line[i])
-    #     dataset.append(temp)
-    # fr = open('C:\\Users\\王教授\\Desktop\\test1.txt')
-    # dataset = []
-    #
-    # for line in fr.readlines():
-    #     line = line.strip()
-    #     temp = line.split(',')
-    #     dataset.append(temp)
-    # label = [1, 2, 3, 4, 5, 6]
     fr = open('C:\\Users\\王教授\\Desktop\\校赛D题\\test2.txt')
     dataset = []
     label = []
@@ -109,6 +92,7 @@ def classiyyNB(Inputdata, p1, p2, p3, p4, p5, p6, pInsult):
     save.append(p4vec)
     save.append(p5vec)
     save.append(p6vec)
+    print(save)
     t = save.index(max(save))
     return t + 1
 
