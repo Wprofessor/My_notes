@@ -45,6 +45,7 @@ def stocGradAscent(dataMat, LabelMat):
         weights = weights + error * dataMat[randIndex]
     return weights
 
+
 def draw(weights):
     weights = np.array(weights)
     dataMat, LabelMat = loadDataSet()
