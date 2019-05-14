@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b2c944-a856-4e82-aa0f-e580a802a70e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sklearn/LR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0-1bag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testClassify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../testClassify/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testClassify/src/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../基于tf-idf的情感分类.ipynb" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +35,7 @@
         <counts>
           <entry key="ipynb" value="4" />
           <entry key="lastfailed" value="1" />
-          <entry key="py" value="84" />
+          <entry key="py" value="86" />
           <entry key="txt" value="84" />
         </counts>
       </usages-collector>
@@ -38,20 +43,20 @@
         <counts>
           <entry key="IPNB" value="4" />
           <entry key="PLAIN_TEXT" value="85" />
-          <entry key="Python" value="84" />
+          <entry key="Python" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="py" value="23661" />
+          <entry key="py" value="23694" />
           <entry key="txt" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="23661" />
+          <entry key="Python" value="23694" />
         </counts>
       </usages-collector>
     </session>
@@ -61,11 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -73,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1539">
-              <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+            <state relative-caret-position="243">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -83,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/sklearn/LR.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="779">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -94,17 +96,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KNN_S.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="881">
+              <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TF-IDF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+            <state relative-caret-position="185">
+              <caret line="80" column="34" lean-forward="true" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
               <folding>
                 <element signature="e#139#156#0" expanded="true" />
               </folding>
@@ -113,10 +115,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/0-1bag.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/0-1bagBFS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logRegres.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <state relative-caret-position="476">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <marker date="1557492710542" expanded="true" signature="71:76" ph="..." />
@@ -129,22 +155,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mathmodelD/NBayes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding>
-                <marker date="1557218175030" expanded="true" signature="2167:2168" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mathmodelD/similerity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+            <state relative-caret-position="486">
+              <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
               <folding>
                 <marker date="1556978049687" expanded="true" signature="766:2369" ph="..." />
                 <marker date="1556978049687" expanded="true" signature="1551:2369" ph="..." />
@@ -156,7 +170,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mathmodelD/preditForth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="140">
               <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -217,10 +231,12 @@
         <option value="$PROJECT_DIR$/mathmodelD/preditValue.py" />
         <option value="$PROJECT_DIR$/logRegres.py" />
         <option value="$PROJECT_DIR$/TF-IDF.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/NaïveBayes.py" />
         <option value="$PROJECT_DIR$/sklearn/LR.py" />
         <option value="$USER_HOME$/Downloads/06_Logistic案例：乳腺癌分类.ipynb" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/0-1bag.py" />
+        <option value="$PROJECT_DIR$/0-1bagBFS.py" />
       </list>
     </option>
   </component>
@@ -243,11 +259,6 @@
               <item name="Algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -257,7 +268,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -281,8 +292,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.logRegres">
-    <configuration name="LR" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.0-1bagBFS">
+    <configuration name="0-1bagBFS" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -290,11 +301,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sklearn" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sklearn/LR.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/0-1bagBFS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,77 +335,65 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="logRegres" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pytest for 0-1bagBFS" type="tests" factoryName="py.test" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logRegres.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;0-1bagBFS.test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="preditForth" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algorithms" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mathmodelD" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mathmodelD/preditForth.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in NBayes.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for 0-1bag.test" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mathmodelD" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/mathmodelD/NBayes.py&quot;" />
+      <option name="_new_target" value="&quot;0-1bag.test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.preditForth" />
-      <item itemvalue="Python tests.pytest in NBayes.py" />
+      <item itemvalue="Python tests.pytest in test.py" />
+      <item itemvalue="Python tests.pytest for 0-1bagBFS" />
       <item itemvalue="Python.TF-IDF" />
-      <item itemvalue="Python.LR" />
-      <item itemvalue="Python.logRegres" />
+      <item itemvalue="Python tests.pytest for 0-1bag.test" />
+      <item itemvalue="Python.0-1bagBFS" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.logRegres" />
-        <item itemvalue="Python.LR" />
+        <item itemvalue="Python.0-1bagBFS" />
         <item itemvalue="Python.TF-IDF" />
-        <item itemvalue="Python tests.pytest in NBayes.py" />
-        <item itemvalue="Python.preditForth" />
+        <item itemvalue="Python tests.pytest for 0-1bag.test" />
+        <item itemvalue="Python tests.pytest for 0-1bagBFS" />
+        <item itemvalue="Python tests.pytest in test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -412,27 +411,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_NBayes_py - 2019.04.30 at 19h 31m 36s.xml">
-      <configuration name="pytest in NBayes.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.05.04 at 14h 34m 28s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_NBayes_py - 2019.05.04 at 14h 34m 54s.xml">
-      <configuration name="pytest in NBayes.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.05.04 at 19h 59m 21s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.05.04 at 20h 04m 30s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.05.04 at 20h 06m 05s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_NBayes_testingNB - 2019.05.05 at 21h 04m 55s.xml">
-      <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_NBayes_testingNB - 2019.05.05 at 21h 11m 30s.xml">
       <configuration name="pytest for NBayes.testingNB" configurationId="tests" />
     </history-entry>
@@ -441,6 +419,27 @@
     </history-entry>
     <history-entry file="pytest_in_NBayes_py - 2019.05.07 at 16h 36m 18s.xml">
       <configuration name="pytest in NBayes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_0-1bag_py - 2019.05.14 at 17h 01m 47s.xml">
+      <configuration name="pytest in 0-1bag.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_0-1bag_py - 2019.05.14 at 17h 04m 33s.xml">
+      <configuration name="pytest in 0-1bag.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_NaïveBayes_py - 2019.05.14 at 17h 08m 09s.xml">
+      <configuration name="pytest in NaïveBayes.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_0-1bag_py - 2019.05.14 at 17h 08m 14s.xml">
+      <configuration name="pytest in 0-1bag.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_0-1bag_py - 2019.05.14 at 17h 09m 09s.xml">
+      <configuration name="pytest in 0-1bag.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_0-1bag_py - 2019.05.14 at 17h 10m 38s.xml">
+      <configuration name="pytest in 0-1bag.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_py - 2019.05.14 at 17h 10m 55s.xml">
+      <configuration name="pytest in test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -470,16 +469,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/2_141.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/handDigits/2_143.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/handDigits/2_148.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-538" />
@@ -700,7 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mathmodelD/NBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="196">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
             <marker date="1557218175030" expanded="true" signature="2167:2168" ph="..." />
@@ -710,7 +699,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mathmodelD/preditForth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="140">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -720,8 +709,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mathmodelD/similerity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+        <state relative-caret-position="486">
+          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
           <folding>
             <marker date="1556978049687" expanded="true" signature="766:2369" ph="..." />
             <marker date="1556978049687" expanded="true" signature="1551:2369" ph="..." />
@@ -736,20 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KNN_S.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+        <state relative-caret-position="881">
+          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -760,20 +739,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn/LR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logRegres.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state relative-caret-position="476">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <marker date="1557492710542" expanded="true" signature="71:76" ph="..." />
@@ -784,19 +753,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn/LR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NaïveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        <state relative-caret-position="243">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TF-IDF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+        <state relative-caret-position="185">
+          <caret line="80" column="34" lean-forward="true" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
           <folding>
             <element signature="e#139#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0-1bag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0-1bagBFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
