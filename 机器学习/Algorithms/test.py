@@ -9,3 +9,5 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 
 
+for i in range(3,-1,-1):
+    print(i)
