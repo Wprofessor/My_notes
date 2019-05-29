@@ -61,6 +61,7 @@ batch_n = (int)(mnist_data.train.num_examples / batch_size)
 
 print('batch_n: %d, examples num: %d, batch size: %d' % (batch_size, mnist_data.train.num_examples, batch_size))
 
+
 with tf.Session() as sess:
     #  writer = tf.summary.FileWriter('./graphs/dnn', sess.graph)
 
@@ -74,20 +75,28 @@ with tf.Session() as sess:
         for i in range(batch_n):
             # 获取batch数据
             batch_x, batch_y = mnist_data.train.next_batch(batch_size)
+            loss_c = sess.run(loss, feed_dict={X: batch_x, Y: batch_y})
+            sess.run(optimizer, feed_dict={X: batch_x, Y: batch_y})
+            loss_avg += loss_c
 
-            _, l = sess.run([optimizer, loss], feed_dict={X: batch_x, Y: batch_y})
-            loss_avg += l
-
-        loss_avg = (loss_avg / batch_n)
-
-        print('epoch: %d, loss: %f' % (epoch, loss_avg))
+        loss_avg = loss_avg/batch_n
+        print('epoch: ', epoch, 'loss: ', loss_avg)
 
     print('train finished')
 
     # 在测试集上评估
     correct_prediction = tf.equal(tf.argmax(y_pred, 1), tf.argmax(Y, 1))
+    # tf.equal的用法：
+    # A = [[1,3,4,5,6]]
+    # B = [[1,3,4,3,2]]
+    #
+    # with tf.Session() as sess:
+    #     print(sess.run(tf.equal(A, B)))
+    # [[ True  True  True False False]]
+    # tf.argmax返回最大值的索引
     # 计算准确率
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+    # tf.cast将结果类型转化为float
     print("Accuracy:", accuracy.eval({X: mnist_data.test.images, Y: mnist_data.test.labels}))
 
     #  writer.close()
